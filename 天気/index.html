@@ -1,1 +1,55 @@
+<a href="https://リンク先のURL">
+  <img src="logo.png" alt="Logo" id="logo">
+</a>
 
+<ul id="nav-list">
+  <li><a href="https://リンク先1">電車</a></li>
+  <li><a href="https://リンク先2">スポーツ</a></li>
+  <li><a href="https://リンク先3">経済</a></li>
+  <li><a href="https://リンク先4">IT</a></li>
+  <li><a href="https://リンク先5">化学</a></li>
+  <li><a href="https://リンク先6">医療</a></li>
+  <li><a href="https://リンク先7">社会</a></li>
+</ul>
+
+<style>
+  /* ロゴのスタイル */
+  #logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: auto;
+    margin: 10px;
+  }
+
+  /* ナビゲーションリストのスタイル */
+  #nav-list {
+    list-style-type: none; /* ドットを消す */
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 100px; /* ロゴの右隣に配置 */
+    align-items: center;
+  }
+
+  /* リスト項目のスタイル */
+  #nav-list li {
+    margin-right: 20px; /* リストの間にスペースを確保 */
+  }
+
+  /* リンクのスタイル */
+  #nav-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px; /* 必要に応じてフォントサイズを調整 */
+  }
+
+  /* ホバー時のリンクのスタイル */
+  #nav-list a:hover {
+    text-decoration: underline;
+    color: blue; /* ホバー時の色を変更 */
+  }
+</style>
