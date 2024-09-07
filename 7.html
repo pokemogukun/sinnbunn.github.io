@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース記事詳細</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .content {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>ニュース記事詳細</h1>
+    <div class="content" id="article-content">
+        <!-- 記事内容がここに表示される -->
+    </div>
+    <a href="index.html">戻る</a>
+
+    <script>
+        async function loadArticle() {
+            try {
+                // ローカルストレージから記事URLを取得
+                const urls = JSON.parse(localStorage.getItem('articleUrls'));
+                if (!urls) {
+                    throw new Error('記事のURLが保存されていません');
+                }
+
+                // 現在のURLから記事番号を取得
+                const articleUrl = urls[6]; // 7.html なので最初の記事URL
+
+                if (articleUrl) {
+                    // 記事内容を取得して表示
+                    const response = await fetch(articleUrl);
+                    const articleHtml = await response.text();
+                    document.getElementById('article-content').innerHTML = articleHtml;
+                } else {
+                    document.getElementById('article-content').innerText = '記事が見つかりませんでした';
+                }
+            } catch (error) {
+                console.error('記事の取得に失敗しました', error);
+                document.getElementById('article-content').innerText = '記事の取得に失敗しました';
+            }
+        }
+
+        // ページが読み込まれた時に記事を表示
+        window.onload = loadArticle;
+    </script>
+</body>
+</html>
