@@ -1,0 +1,1839 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>【ウェザーニュース】天気 - 台風・地震・防災情報｜予報精度No.1	</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-itunes-app" content="app-id=302955766">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="【天気予報精度No.1】最新の気象情報ならウェザーニュース！雨雲レーダーや台風、地震、注意報・警報、アメダス、天気図など気象や防災に役立つ情報、気象予報士解説のお天気ニュースを随時更新中。天気痛や熱中症、花粉の生活情報に加え、桜や紅葉、スキーの季節情報など天気に関する全てをサポートします。"/>
+    <meta name="keywords" content="全国,天気予報,ウェザーニュース"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@wni_jp"/>
+    <meta name="twitter:creator" content="@wni_jp">
+    <meta name="twitter:image" content="https://weathernews.jp/onebox/img/og_img.jpg">
+    <meta name="twitter:title" content="【ウェザーニュース】天気 - 台風・地震・防災情報｜予報精度No.1	">
+    <meta name="twitter:description" content="【天気予報精度No.1】最新の気象情報ならウェザーニュース！雨雲レーダーや台風、地震、注意報・警報、アメダス、天気図など気象や防災に役立つ情報、気象予報士解説のお天気ニュースを随時更新中。天気痛や熱中症、花粉の生活情報に加え、桜や紅葉、スキーの季節情報など天気に関する全てをサポートします。"/> <meta property="fb:app_id" content="1500388770270212"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="ウェザーニュース"/>
+    <meta property="og:url" content="https://weathernews.jp"/>
+    <meta property="og:image" content="https://weathernews.jp/onebox/img/og_img.jpg"/>
+    <meta property="og:title" content="【ウェザーニュース】天気 - 台風・地震・防災情報｜予報精度No.1	">
+    <meta property="og:description" content="【天気予報精度No.1】最新の気象情報ならウェザーニュース！雨雲レーダーや台風、地震、注意報・警報、アメダス、天気図など気象や防災に役立つ情報、気象予報士解説のお天気ニュースを随時更新中。天気痛や熱中症、花粉の生活情報に加え、桜や紅葉、スキーの季節情報など天気に関する全てをサポートします。"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="【ウェザーニュース】天気 - 台風・地震・防災情報｜予報精度No.1	" />
+    <link rel="icon" href="https://weathernews.jp/s/img/favicon.ico" sizes="32x32"><!-- 32×32 -->	
+	<link rel="icon" href="https://weathernews.jp/s/img/icon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="https://weathernews.jp/s/img/apple-touch-icon.png"><!-- 180×180 -->
+	<link rel="manifest" href="https://weathernews.jp/s/img/manifest.webmanifest">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/sanitize_v2.0.min.css">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/header_v3.1.min.css?240418">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/sub_v1.2.min.css?240725">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/footer_v1.0.min.css?240306">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/app_v3.5.min.css">
+    <link rel="stylesheet" href="https://weathernews.jp/onebox/css/app_map.css?231011">
+    <link rel="shortcut icon" type="image/x-icon" href="https://weathernews.jp/s/img/favicon.ico">
+    <link rel="canonical" href="https://weathernews.jp">
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NQD3CBD7');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://weathernews.jp/s/js/wniutil.min.js"></script>
+    <script src="https://weathernews.jp/s/js/ads_prebid_async.js?14"></script>
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var webid;
+        var ck_webid = (String(document.cookie).match(/web_id=(.+?)(;|$)/) || [])[1];
+ 
+        var webidurl = 'https://weathernews.jp/api/webid';
+        if (ck_webid) {
+                webid = ck_webid;
+                // webid cookie update
+                fetch(webidurl + "?webid=" + webid);
+        } else {
+                // webid create & cookie write
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', webidurl, false);
+                xhr.send();
+                if (xhr.status == 200){
+                    var jsonObj = JSON.parse(xhr.responseText);
+                    if(jsonObj.uuid) webid = jsonObj.uuid;
+                }
+        }
+ 
+        if (webid) {
+                var wnum = parseInt(webid.slice(-1), 16);
+                // PPID 50% -> 100%
+                //if (wnum % 2 === 0) {
+                googletag.cmd.push(function () {
+                        googletag.pubads().setPublisherProvidedId(webid);
+                });
+                //}
+        }
+    </script>
+<script>
+var use_prebid = true;
+var browsi = '';
+var browsi_flag = '';
+var num = Math.random();
+if(wniutil.param.browsi) {
+    if(wniutil.param.browsi == 'A'){
+        browsi = '';
+        browsi_flag = 'A';
+    } else if(wniutil.param.browsi == 'B') {
+        browsi = '_browsi';
+        browsi_flag = 'B';
+    } else {
+        browsi = '';
+        browsi_flag = 'A';
+    }
+} else {
+    if('' == ''){
+        browsi = '';
+        browsi_flag = 'A';
+    } else {
+        if(num < 0.1){
+            browsi = '';
+            browsi_flag = 'A';
+        } else {
+            browsi = '_browsi';
+            browsi_flag = 'B';
+        }
+    }
+}
+(function() {
+    var s = document.createElement('script');
+    if(smart_platform == '') s.src = "https://flux-cdn.com/client/weathernews/flux_weathernews_PC_AS_TM" + browsi + ".min.js";
+    else s.src = "https://flux-cdn.com/client/weathernews/flux_weathernews_SP_AS_TM" + browsi + ".min.js"
+    s.async = 'async';
+    var t = document.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(s, t);
+})();
+googletag.cmd.push(function () {
+    googletag.pubads().setTargeting("Browsi", browsi_flag);
+});
+</script>
+<script>
+        /* Setting Path for GA */
+        var sendParamList = ["fm"]; /* set this param for manual */
+        var sendParamStr  = "";
+        var p = location.search.split("?");
+        if (p[1]) {
+                var q = p[1].split("&").sort(function(a,b){if(a>b) return 1;else return -1});
+                var l = q.length;
+                for (var i = 0; i < l; i++) {
+                        var kv = q[i].split("=");
+                        for(var j = 0; j < sendParamList.length;j++){
+                                if(kv[0] === sendParamList[j]){
+                                        sendParamStr += q[i] + "&";
+                                        break;
+                                }
+                        }
+                }
+        };
+        var Path = location.pathname;
+        var c = (Path.match(/\?/)) ? "&" : "?";
+        Path += c + sendParamStr.slice(0,-1);
+</script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72962242-1"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-72962242-1', { 'page_path': Path });
+        gtag('config', 'G-744EN7FZFC', { 'page_path': Path , 'user_id': webid });
+</script>
+<script>
+    var canPreload = function(){
+        try {
+            return document.createElement('link').relList.supports('preload');
+        } catch (e) {
+            return false;
+        }
+    };
+ 
+    function preloadImage(href) {
+        if (!canPreload) return;
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'preload');
+        link.setAttribute('as', 'image');
+        link.setAttribute('href', href);
+        link.onload = () => document.head.removeChild(link);
+        document.head.appendChild(link);
+    }
+ 
+    preloadImage('https://site.weathernews.jp/site/forecast/image/map/JAPAN.today.png?' + wniutil.nocache);
+</script>
+<style>
+    [v-cloak] {
+        opacity : 0 ;
+    }
+    #sticky_pc {
+        width: 100%;
+        min-height: 50px;
+        background-color: #fff;
+        transform: translateY(100px);
+        display: block;
+        z-index:10;
+    }
+    #sticky_pc.show {
+        position: fixed;
+        text-align: center;
+        display: block;
+        bottom: 0px;
+        animation: slideIn 0.5s ease-out 1s 1 forwards;
+        -webkit-animation: slideIn 0.5s ease-out 1s 1 forwards;
+    }
+    #sticky_pc.hide {
+        opacity: 1;
+        animation: slideOut 0.5s ease-out 0s 1 forwards;
+        -webkit-animation: slideOut 0.5s ease-out 0s 1 forwards;
+    }
+    @keyframes slideIn{
+        0%{
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+ 
+    @keyframes slideOut{
+        0%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(100px);
+            opacity: 0;
+            display: none;
+        }
+    }
+    .wxWeek {
+        margin-top: 10px;
+    }
+    #header .search-box {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end
+    }
+ 
+    #header .search-box>:not(:last-child) {
+        margin-right: 2px
+    }
+ 
+    #header .inputArea {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-flex-item-align: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        width: 300px;
+        border: 1px solid #ccc
+    }
+ 
+    #header .inputArea .form-submit {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: #184899;
+        color: #fff
+    }
+ 
+    #header .form-submit__icon {
+        width: auto;
+        height: 20px;
+        margin-bottom: 4px
+    }
+ 
+    #header .form-txt {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: auto;
+        padding: 11px 5px;
+        border: none
+    }
+ 
+    .fukidashi {
+        -webkit-transform: translateX(-50%);
+        display: none;
+        z-index: 10;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%)
+    }
+ 
+    .fukidashi .inner>:not(:last-child) {
+        margin-bottom: 10px
+    }
+ 
+    #header .fukidashi .inputArea {
+        width: 100%
+    }
+ 
+    .fukidashi .inner {
+        -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.5);
+        position: relative;
+        margin: 0 10px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,.5)
+    }
+ 
+    .fukidashi .tit-03 {
+        margin-bottom: 5px
+    }
+ 
+    .fukidashi .close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 17px;
+        height: 17px;
+        content: ""
+    }
+ 
+    .fukidashi .close img {
+        width: 17px
+    }
+ 
+    .fukidashi:after,.fukidashi:before {
+        display: block;
+        z-index: 11;
+        position: absolute;
+        top: -10px;
+        right: 75px;
+        width: 0;
+        height: 0;
+        border: 7px solid transparent;
+        border-top: none;
+        border-bottom: 10px solid #fff;
+        content: ""
+    }
+ 
+    .fukidashi:before {
+        z-index: 11;
+        top: -10px;
+        border-bottom: 10px solid #fff
+    }
+ 
+    .fukidashi:after {
+        z-index: 10;
+        top: -11px;
+        border-bottom: 10px solid rgba(0,0,0,.25)
+    }
+</style>
+</head>
+ 
+<body id="body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQD3CBD7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="header" class="globalHeader">
+        <div class="top">
+            <div class="inner wrap">
+                <div class="logo">
+                    <a href="https://weathernews.jp/?fm=header">
+                        <img src="https://weathernews.jp/onebox/img/header/logo_wni.svg" width="184" height="40" alt="ウェザーニュース" class="pc">
+                        <img src="https://weathernews.jp/onebox/img/header/logo_wni_sp.svg" width="36" height="36" alt="ウェザーニュース" class="sp">
+                    </a>
+                </div>
+                <div class="history" v-cloak>
+                    <div class="historyItem" :id="index" v-for="(item,index) in fcst_hist">
+                        <a :href="item.url + '?fm=header'" class="link">
+                            <figure class="image">
+                                <img class="wx__icon" :src="item.telop" width="38" height="38" alt="" loading="lazy">
+                            </figure>
+                            <div class="hist__content">
+                                <p class="text">{{item.cityname}}</p>
+                                <p class="temp">
+                                    <span class="high">{{item.high}}</span>
+                                    /
+                                    <span class="low">{{item.low}}</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="close" @click="historyClose(index)"></div>
+                    </div>
+                </div>
+                <div class="headerSearch">
+                    <form class="form pc" onsubmit="search_city_input('search_pc');return false;">
+                        <label class="search">
+                            <input id="search_pc" class="input" placeholder="都市名,郵便番号,市外局番など" type="text">
+                            <button class="submit">
+                                <img src="https://weathernews.jp/onebox/img/icon/icon_mushimegane.svg" width="30" height="30" alt="" loading="lazy">
+                            </button>
+                        </label>
+                        <section class="search_pc_block" style="display:none" id="search_result1"></section>
+                    </form>
+                    <button id="headerOverlayBtn__search" class="button sp">
+                        <span class="plainImage">
+                            <img src="https://weathernews.jp/onebox/img/icon/icon_mushimegane--blue.svg" width="20" height="20" alt="" loading="lazy">
+                        </span>
+                        <span class="text">検索</span>
+                    </button>
+                    <button class="button" onclick="ga_and_go('https://weathernews.jp/onebox/gps.html?fm=header','gps_link_btn'); return false;">
+                        <span class="plainImage">
+                            <img src="//weathernews.jp/onebox/img/icon/icon_search.svg" width="20" height="20" alt="" loading="lazy">
+                        </span>
+                        <span class="text">現在地</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section id="headerOverlay" class="headerOverlay">
+            <section class="headerOverlay__content">
+                <div id="overlayCloseBtn" class="closeButton"><span></span></div>
+                <div class="headerOverlay__wrap">
+                    <section id="headerOverlayContent__search">
+                        <p class="search_tit" style="margin-bottom: 10px;">天気予報を検索</p>
+                        <form onsubmit="search_city_input('search_sp');return false;">
+                            <label for="" class="headerInputText">
+                                <input id="search_sp" type="text" placeholder="都市名,郵便番号,市外局番など" class="form-txt">
+                                <button type="submit">
+                                    <img src="https://weathernews.jp/onebox/img/icon/icon_mushimegane.svg" width="30px" height="30px" class="icon" alt="">
+                                </button>
+                            </label>
+                        </form>
+                    </section>
+                    <div class="sp" style="display:none" id="search_result2"></div>
+                    <section id="headerOverlayContent__menu">
+                        <section class="headerListMenu__group">
+                            <p class="headerListMenu__title">天気</p>
+                            <ul class="headerListMenu even">
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/?fm=header" onclick="ga_and_go(this.href,&quot;link_tenki&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_forecast.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_forecast.svg" style=""></i>天気予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/topics/?fm=header" onclick="ga_and_go(this.href,&quot;link_topics&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_topics@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_topics@2x.png" style=""></i>お天気ニュース</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/onebox/amedas/?fm=header" onclick="ga_and_go(this.href,&quot;link_obs&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_obsdata.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_obsdata.svg" style=""></i>実況天気(アメダス)</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/onebox/radar/?fm=header" onclick="ga_and_go(this.href,&quot;link_radar&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_radar.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_radar.svg" style=""></i>雨雲レーダー</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/livecam/?fm=header" onclick="ga_and_go(this.href,&quot;link_livecam&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_livecam.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_livecam.svg" style=""></i>ライブカメラ</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/thunder/?fm=header" onclick="ga_and_go(this.href,&quot;link_thunder&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_thunder.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_thunder.svg" style=""></i>落雷情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/satellite/?fm=header" onclick="ga_and_go(this.href,&quot;link_satellite&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_satellite.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_satellite.svg" style=""></i>衛星雲画像</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/story/?fm=header" onclick="ga_and_go(this.href,&quot;link_story&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_wxchart.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_wxchart.svg" style=""></i>天気図</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/opinion/?fm=header" onclick="ga_and_go(this.href,&quot;link_opinion&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_opinion.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_opinion.svg" style=""></i>長期予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/wnl/?fm=header" onclick="ga_and_go(this.href,&quot;link_wnilive&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_wnl@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_wnl@2x.png" style=""></i>ライブ動画番組</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/world/?fm=header" onclick="ga_and_go(this.href,&quot;link_world&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_world.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_world.svg" style=""></i>世界天気</a></li>
+                                <li class="headerListMenu__item"><a href="https://wxrepo.weathernews.jp/report/area/?fm=header" onclick="ga_and_go(this.href,&quot;link_wxreport&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_report.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_report.svg" style=""></i>ウェザーリポート</a></li>
+                            </ul>
+                        </section>
+                        <section class="headerListMenu__group">
+                            <p class="headerListMenu__title">防災・減災</p>
+                            <ul class="headerListMenu odd">
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/quake/?fm=header" onclick="ga_and_go(this.href,&quot;link_quake&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_quake.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_quake.svg" style=""></i>地震情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/tsunami/?fm=header" onclick="ga_and_go(this.href,&quot;link_tsunami&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_tsunami.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_tsunami.svg" style=""></i>津波情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/onebox/typhoon/?fm=header" onclick="ga_and_go(this.href,&quot;link_typhoon&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_typhoon.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_typhoon.svg" style=""></i>台風情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/onebox/warn/?fm=header" onclick="ga_and_go(this.href,&quot;link_warn&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_warning.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_warning.svg" style=""></i>警報・注意報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/volcano/?fm=header" onclick="ga_and_go(this.href,&quot;link_volcano&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_volcano.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_volcano.svg" style=""></i>火山情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/s/gensai/?fm=header" onclick="ga_and_go(this.href,&quot;link_gensai&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_gensai@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_gensai@2x.png" style=""></i>減災情報</a></li>
+                                <li class="headerListMenu__item"><a href="//weathernews.jp/guerrilla/?fm=header" onclick="ga_and_go(this.href,&quot;link_guerrilla&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_guerrilla@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_guerrilla@2x.png" style=""></i>ゲリラ雷雨情報</a></li>
+                            </ul>
+                        </section>
+                        <section class="headerListMenu__group">
+                            <p class="headerListMenu__title">自然・季節・健康</p>
+                            <ul class="headerListMenu even">
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/pollen/?fm=header" onclick="ga_and_go(this.href,&quot;link_pollen&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_pollen.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_pollen.svg" style=""></i>花粉飛散予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/sakura/?fm=header" onclick="ga_and_go(this.href,&quot;link_sakura&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_sakura.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_sakura.svg" style=""></i>さくら開花情報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/hotaru/?fm=header" onclick="ga_and_go(this.href,&quot;link_hotaru&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_hotaru@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_hotaru@2x.png" style=""></i>ほたる情報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/ajisai/?fm=header" onclick="ga_and_go(this.href,&quot;link_ajisai&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_ajisai@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_ajisai@2x.png" style=""></i>あじさい情報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/ski/?fm=header" onclick="ga_and_go(this.href,&quot;link_ski&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_ski@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_ski@2x.png" style=""></i>スキー＆スノボ</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/golf/?fm=header" onclick="ga_and_go(this.href,&quot;link_golf&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_golf.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_golf.svg" style=""></i>ゴルフ場の天気</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/fishing/?fm=header" onclick="ga_and_go(this.href,&quot;link_fishing&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_fishing@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_fishing@2x.png" style=""></i>釣り</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/marine/?fm=header" onclick="ga_and_go(this.href,&quot;link_marine&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_marine@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_marine@2x.png" style=""></i>マリン</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/star/?fm=header" onclick="ga_and_go(this.href,&quot;link_star&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_star.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_star.svg" style=""></i>星空</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/stadium/?fm=header" onclick="ga_and_go(this.href,&quot;link_stadium&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_stadium@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_stadium@2x.png" style=""></i>スポーツ天気</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/laundry/?fm=header" onclick="ga_and_go(this.href,&quot;link_laundry&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_sentaku@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sentaku@2x.png" style=""></i>お洗濯情報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/dry/?fm=header" onclick="ga_and_go(this.href,&quot;link_dry&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_dry@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_dry@2x.png" style=""></i>乾燥指数</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/cold/?fm=header" onclick="ga_and_go(this.href,&quot;link_cold&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_cold@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_cold@2x.png" style=""></i>風邪予防指数</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/pain/?fm=header" onclick="ga_and_go(this.href,&quot;link_pain&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_pain@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_pain@2x.png" style=""></i>天気痛予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/uv/?fm=header" onclick="ga_and_go(this.href,&quot;link_uv&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_uv@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_uv@2x.png" style=""></i>紫外線情報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/clothes/?fm=header" onclick="ga_and_go(this.href,&quot;link_clothes&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_clothes.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_clothes.svg" style=""></i>服装予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/heatstroke/?fm=header" onclick="ga_and_go(this.href,&quot;link_heatstroke&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_heatstroke@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_heatstroke@2x.png" style=""></i>熱中症予報</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/hatsumoude/?fm=header" onclick="ga_and_go(this.href,&quot;link_hatsumoude&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_hatsumoude@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_hatsumoude@2x.png" style=""></i>初詣</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/sunrise/?fm=header" onclick="ga_and_go(this.href,&quot;link)sunrise&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_sunrise@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sunrise@2x.png" style=""></i>初日の出</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/illumi/?fm=header" onclick="ga_and_go(this.href,&quot;link)illumi&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_illumi@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_illumi@2x.png" style=""></i>イルミネーション</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/koyo/?fm=header" onclick="ga_and_go(this.href,&quot;link_koyo&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_koyo@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_koyo@2x.png" style=""></i>紅葉</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/hanabi/?fm=header" onclick="ga_and_go(this.href,&quot;link_hanabi&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_fireworks@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_fireworks@2x.png" style=""></i>花火情報</a></li>
+                            </ul>
+                        </section>
+                        <section class="headerListMenu__group">
+                            <p class="headerListMenu__title">便利なメニュー</p>
+                            <ul class="headerListMenu even">
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/about_forecast/?fm=header" onclick="ga_and_go(this.href,&quot;link_no1&quot;)" style="font-size:12px"><i class="ico"><img loading="lazy" src="https://weathernews.jp/onebox/img/icon/icon_NO1.svg" data-original="https://weathernews.jp/onebox/img/icon/icon_NO1.svg" style=""></i>予報精度向上の取り組み</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/about_forecast/faq/?fm=header" onclick="ga_and_go(this.href,&quot;link_faq&quot;)"><i class="ico"><img loading="lazy" src="https://weathernews.jp/onebox/img/icon/icon_question0.svg" data-original="https://weathernews.jp/onebox/img/icon/icon_question0.svg" style=""></i>予報に関するFAQ</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/sorashop/?fm=header" onclick="ga_and_go(this.href,&quot;link_sorashop&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_sorashop@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sorashop@2x.png" style=""></i>SORASHOP</a></li>
+                                <li class="headerListMenu__item"><a href="http://labs.weathernews.jp/data.html?fm=header" onclick="ga_and_go(this.href,&quot;link_labs&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_labs.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_labs.svg" style=""></i>Labs Ch.</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/s/solution/?fm=header" onclick="ga_and_go(this.href,&quot;link_mysolution&quot;)"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_mysolution.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_mysolution.svg" style=""></i>マイソリューション</a></li>
+                                <li class="headerListMenu__item"><a href="https://weathernews.jp/quake/html/urgentquake.html?fm=header" onclick="ga_and_go(this.href,&quot;link_L10s&quot;)" style="font-size:12px"><i class="ico"><img loading="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_10sec.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_10sec.svg" style=""></i>The Last 10-Second</a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </section>
+        <div class="menu">
+            <ul class="menu-inner wrap">
+                <li class="menu-item is-selected" id="headerGlobalMenu01"><span>オススメ</span></li>
+                <li class="menu-item" id="headerGlobalMenu02"><span>天気予報・観測</span></li>
+                <li class="menu-item" id="headerGlobalMenu03"><span>防災・減災</span></li>
+                <li class="menu-item" id="headerGlobalMenu04"><span>季節/レジャー</span></li>
+                <li class="menu-item" id="headerGlobalMenu05"><span>健康/生活</span></li>
+                <li class="menu-item" id="headerGlobalMenu06"><span>便利メニュー</span></li>
+            </ul>
+        </div>
+        <div class="item">
+            <ul class="wrap item-inner is-selected" id="headerGlobalSubMenu01">
+                <li><a href="https://weathernews.jp/onebox/radar/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_radar.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">雨雲レーダー</p></a></li><li><a href="https://weathernews.jp/onebox/typhoon/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_typhoon.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">台風情報</p></a></li><li><a href="https://weathernews.jp/quake/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_quake.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">地震情報</p></a></li><li><a href="https://weathernews.jp/onebox/tenki/week/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_weekly.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">週間天気</p></a></li><li><a href="https://weathernews.jp/onebox/amedas/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_amedas.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">アメダス</p></a></li><li><a href="https://weathernews.jp/mountain/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_mountain.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">山の天気</p></a></li><li><a href="https://weathernews.jp/heatstroke/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_heatstroke.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">熱中症情報</p></a></li><li><a href="https://weathernews.jp/s/topics/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_topics.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">お天気ニュース</p></a></li><li><a href="https://wxrepo.weathernews.jp/report/area/?fm=header" class="recommendItem"><figure class="image"><img src="https://weathernews.jp/onebox/img/header/icon_reportmap.svg" width="16" height="16" alt="" loading="lazy"></figure><p class="text">ウェザーリポート</p></a></li>
+            </ul>
+            <ul class="wrap item-inner" id="headerGlobalSubMenu02">
+                <li><a href="https://weathernews.jp/?fm=header" class="recommendItem"><p class="text">天気TOP</p></a></li><li><a href="https://weathernews.jp/onebox/tenki/week/?fm=header" class="recommendItem"><p class="text">週間天気</p></a></li><li><a href="https://weathernews.jp/onebox/radar/?fm=header" class="recommendItem"><p class="text">雨雲レーダー</p></a></li><li><a href="https://weathernews.jp/onebox/amedas/?fm=header" class="recommendItem"><p class="text">アメダス</p></a></li><li><a href="https://weathernews.jp/s/thunder/?fm=header" class="recommendItem"><p class="text">雷情報</p></a></li><li><a href="https://weathernews.jp/guerrilla/?fm=header" class="recommendItem"><p class="text">ゲリラ雷雨レーダー</p></a></li><li><a href="https://weathernews.jp/s/story/?fm=header" class="recommendItem"><p class="text">天気図</p></a></li><li><a href="https://weathernews.jp/s/satellite/?fm=header" class="recommendItem"><p class="text">衛星画像</p></a></li><li><a href="https://weathernews.jp/s/opinion/?fm=header" class="recommendItem"><p class="text">長期予報</p></a></li><li><a href="https://weathernews.jp/s/world/?fm=header" class="recommendItem"><p class="text">世界天気</p></a></li><li><a href="https://weathernews.jp/s/topics/?fm=header" class="recommendItem"><p class="text">お天気ニュース</p></a></li><li><a href="https://wxrepo.weathernews.jp/report/area/?fm=header" class="recommendItem"><p class="text">ウェザーリポート</p></a></li><li><a href="https://weathernews.jp/wnl/?fm=header" class="recommendItem"><p class="text">ウェザーニュースLiVE</p></a></li><li><a href="https://weathernews.jp/s/livecam/?fm=header" class="recommendItem"><p class="text">ライブカメラ</p></a></li><li><a href="https://weathernews.jp/s/kosa/radar.html?fm=header" class="recommendItem"><p class="text">黄砂レーダー</p></a></li>
+            </ul>
+            <ul class="wrap item-inner" id="headerGlobalSubMenu03">
+                <li><a href="https://weathernews.jp/onebox/typhoon/?fm=header" class="recommendItem"><p class="text">台風情報</p></a></li><li><a href="https://weathernews.jp/quake/?fm=header" class="recommendItem"><p class="text">地震情報</p></a></li><li><a href="https://weathernews.jp/tsunami/?fm=header" class="recommendItem"><p class="text">津波情報</p></a></li><li><a href="https://weathernews.jp/onebox/warn/?fm=header" class="recommendItem"><p class="text">警報・注意報</p></a></li><li><a href="https://weathernews.jp/s/volcano/?fm=header" class="recommendItem"><p class="text">火山情報</p></a></li><li><a href="https://weathernews.jp/s/gensai/?fm=header" class="recommendItem"><p class="text">減災情報</p></a></li><li><a href="https://weathernews.jp/s/gensai/evacuation/?fm=header" class="recommendItem"><p class="text">避難情報</p></a></li><li><a href="https://weathernews.jp/s/gensai/handbook/?fm=header" class="recommendItem"><p class="text">防災減災ハンドブック</p></a></li>
+            </ul>
+            <ul class="wrap item-inner" id="headerGlobalSubMenu04">
+                <li><a href="https://weathernews.jp/hanabi/?fm=header" class="recommendItem"><p class="text">花火天気 Ch.</p></a></li><li><a href="https://weathernews.jp/mountain/?fm=header" class="recommendItem"><p class="text">山の天気 Ch.</p></a></li><li><a href="https://weathernews.jp/hotaru/?fm=header" class="recommendItem"><p class="text">ほたる情報</p></a></li><li><a href="https://weathernews.jp/ajisai/?fm=header" class="recommendItem"><p class="text">あじさい情報</p></a></li><li><a href="https://weathernews.jp/s/star/?fm=header" class="recommendItem"><p class="text">星空情報</p></a></li><li><a href="https://weathernews.jp/s/golf/?fm=header" class="recommendItem"><p class="text">ゴルフ場の天気</p></a></li><li><a href="https://weathernews.jp/s/marine/?fm=header" class="recommendItem"><p class="text">マリン天気(海の天気)</p></a></li><li><a href="https://weathernews.jp/s/fishing/?fm=header" class="recommendItem"><p class="text">釣り天気</p></a></li><li><a href="https://weathernews.jp/s/stadium/?fm=header" class="recommendItem"><p class="text">スポーツ天気</p></a></li><li><a href="https://weathernews.jp/koyo/?fm=header" class="recommendItem"><p class="text">紅葉情報</p></a></li><li><a href="https://weathernews.jp/sunrise/?fm=header" class="recommendItem"><p class="text">初日の出情報</p></a></li><li><a href="https://weathernews.jp/hatsumoude/?fm=header" class="recommendItem"><p class="text">初詣情報</p></a></li><li><a href="https://weathernews.jp/illumi/?fm=header" class="recommendItem"><p class="text">イルミネーション情報</p></a></li><li><a href="https://weathernews.jp/ski/?fm=header" class="recommendItem"><p class="text">スキー＆スノボ情報</p></a></li><li><a href="https://weathernews.jp/sakura/?fm=header" class="recommendItem"><p class="text">桜開花情報</p></a></li>
+            </ul>
+            <ul class="wrap item-inner" id="headerGlobalSubMenu05">
+                <li><a href="https://weathernews.jp/pollen/?fm=header" class="recommendItem"><p class="text">花粉飛散情報</p></a></li><li><a href="https://weathernews.jp/pain/?fm=header" class="recommendItem"><p class="text">天気痛予報</p></a></li><li><a href="https://weathernews.jp/heatstroke/?fm=header" class="recommendItem"><p class="text">熱中症予報</p></a></li><li><a href="https://weathernews.jp/s/uv/?fm=header" class="recommendItem"><p class="text">紫外線予報</p></a></li><li><a href="https://weathernews.jp/s/clothes/?fm=header" class="recommendItem"><p class="text">服装予報</p></a></li><li><a href="https://weathernews.jp/s/laundry/?fm=header" class="recommendItem"><p class="text">お洗濯情報</p></a></li><li><a href="https://weathernews.jp/cold/?fm=header" class="recommendItem"><p class="text">風邪予防指数</p></a></li><li><a href="https://weathernews.jp/dry/?fm=header" class="recommendItem"><p class="text">乾燥指数</p></a></li>
+            </ul>
+            <ul class="wrap item-inner" id="headerGlobalSubMenu06">
+                <li><a href="https://weathernews.jp/about_forecast/?fm=header" class="recommendItem"><p class="text">予報精度向上の取り組み</p></a></li><li><a href="https://weathernews.jp/about_forecast/faq/?fm=header" class="recommendItem"><p class="text">予報に関するよくある質問</p></a></li><li><a href="https://weathernews.jp/sorashop/?fm=header" class="recommendItem"><p class="text">SORASHOP</p></a></li><li><a href="https://labs.weathernews.jp/data.html?fm=header" class="recommendItem"><p class="text">Labs Ch.</p></a></li><li><a href="https://weathernews.jp/s/solution/sample/" class="recommendItem"><p class="text">マイソリューション</p></a></li><li><a href="https://weathernews.jp/quake/html/urgentquake.html?fm=header" class="recommendItem"><p class="text">The Last 10-Second</p></a></li>
+            </ul>
+            <button id="headerOverlayBtn__menu" class="item-other" href="#menu">
+                <img src="https://weathernews.jp/onebox/img/header/icon_hamburger.svg" width="15" height="15" alt="他メニュー">
+            </button>
+        </div>
+    </div>
+    <article id="outer">
+        
+        <section v-if="ticker_text" class="newsArea no-ja" v-cloak>
+            <div class="newsArea__inner">
+                <div class="newsArea__title" :style="{'background-color':ticker_color}">{{ticker_title}}</div>
+                <div class="newsArea__content"><p class="newsArea__text"><a :href="ticker_url" onclick="ga_and_go(this.href,'link_ticker')" :style="{color:ticker_color}">{{ticker_text}}</a></p></div>
+            </div>
+        </section>
+    </article>
+    <article id="wrapper">
+        <article id="main" class="main">
+            <article class="block">
+                <section class="sp" style="text-align:center;">
+                    <!-- /284705699/Onebox/Onebox_atf2 -->
+                    <div id='div-gpt-ad-1630890223433-0' class="ad-box"
+                        style="min-height:50px; max-height:100px; margin:0 auto 10px; text-align:center;"> </div>
+                </section>
+                <section class="block" style="padding-bottom:0px">
+                    <div class="innerTitle">
+                        <h1 class="index__tit" style="margin-bottom:0px;margin-top:10px">全国の天気予報</h1>
+                    </div>
+                </section>
+                <div class="mapSwitch" v-show="fcst[map_idx].day">
+                    <p v-for="(obj, index) in fcst" :data-num="index" class="mapSwitch__item" v-bind:class="{'sun':obj.holiday == 'sun', 'sat':obj.holiday == 'sat', 'act':map_idx == index}" v-on:click="change_date(index)">
+                        <span class="text" v-html="obj.date"></span><span class="week" v-html="obj.day"></span>
+                    </p>
+                </div>
+                <section class="mapArea">
+                    <div class="map">
+                        <figure>
+                            <img id="map" v-bind:src="mapsrc" style="width:100%;aspect-ratio:1/1;position:absolute; top:0; left:0;" alt="">
+                            <a id="map_highlight"></a>
+                        </figure>
+                    </div>
+                    <div class="commentArea">
+                        <p class="title02"><span class="text" v-html="title[map_idx < 2 ? 'day' : 'week']"></span></p>
+                        <p v-html="comment[map_idx < 2 ? 'day' : 'week']"></p>
+                    </div>
+                </section>
+                <section class="pc" style="text-align:center;">
+                    <!-- /284705699/Onebox/Onebox_atf_pc -->
+                    <div id='div-gpt-ad-1658294899747-0' class="ad-box"
+                        style="min-width:300px; min-height:50px; margin:0 auto 10px; text-align:center;"> </div>
+                </section>
+                <section class="sp" style="text-align:center;">
+                    <!-- /284705699/Onebox/Onebox_atf2 -->
+                    <div id='div-gpt-ad-1630890223433-1' class="ad-box"
+                        style="min-height:50px; max-height:100px; margin:0 auto 10px; text-align:center;"> </div>
+                </section>
+            </article>
+            <article v-show="cityname" class="block" style="display:none;">
+                <section class="wTableArea">
+                    <div class="wTableArea__item">
+                        <h2 class="title01" v-cloak><span>{{pref_jp}}{{cityname}}の1時間毎の天気</span></h2>
+                        <section class="wTableTime">
+                            <div class="wTableTime__thead">
+                                <ul class="wTableTime__tr">
+                                    <li class="wTableTime__td date">
+                                        <p>日</p>
+                                    </li>
+                                    <li class="wTableTime__td time">
+                                        <p>時</p>
+                                    </li>
+                                    <li class="wTableTime__td weather">
+                                        <p>天気</p>
+                                    </li>
+                                    <li class="wTableTime__td rain">
+                                        <p>降水<span class="small">ミリ</span></p>
+                                    </li>
+                                    <li class="wTableTime__td temp">
+                                        <p>気温<span class="small">℃</span></p>
+                                    </li>
+                                    <li class="wTableTime__td wind">
+                                        <p>風速<span class="small">m</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wTableTime__tbody" id="flick_list" v-cloak>
+                                <div v-for="daily in fcst_1h" class="wTableTime__group">
+                                    <div class="wTableTime__td date">
+                                        <p>{{daily.date}}日{{daily.youbi_str}}</p>
+                                    </div>
+                                    <div class="wTableTime__content">
+                                        <ul v-for="hourly in daily.hourly" class="wTableTime__tr">
+                                            <li class="wTableTime__td time">
+                                                <p>{{hourly.time}}</p>
+                                            </li>
+                                            <li class="wTableTime__td weather">
+                                                <p><img :src="hourly.telop" class="wIcon"></p>
+                                            </li>
+                                            <li class="wTableTime__td rain">
+                                                <p>{{hourly.prec}}</p>
+                                            </li>
+                                            <li class="wTableTime__td temp">
+                                                <p>{{hourly.temp}}</p>
+                                            </li>
+                                            <li class="wTableTime__td wind">
+                                                <div class="wdir">
+                                                    <picture>
+                                                        <source :srcset="hourly.wnd_telop_webp" type="image/webp">
+                                                        <img :src="hourly.wnd_telop_png">
+                                                    </picture>
+                                                </div>
+                                                <p>{{hourly.wndspd}}</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="buttonArea pc">
+                                <li class="button01 page-jump prev">
+                                    <span class="link" onclick="javascript:flip_prev();">
+                                        <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                                        <span class="text">前へ</span>
+                                    </span>
+                                </li>
+                                <li class="button01 page-jump next">
+                                    <span class="link" onclick="javascript:flip_next();">
+                                        <span class="text">次へ</span>
+                                        <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </section>
+                        <p class="button01 page-link" style="display:flex;justify-content:flex-end;margin-bottom:10px;margin-top:10px;" v-cloak>
+                            <a :href="'https://weathernews.jp/onebox/tenki/' + pref + '/' + citycode + '/'" class="link">
+                                <span class="text">{{cityname}}の詳しい天気はこちら</span>
+                                <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="wTableArea__item">
+                        <h2 class="title01" v-cloak><span>{{pref_jp}}{{cityname}}の週間天気予報（10日間）</span></h2>
+                        <section class="wTableWeek02">
+                            <div class="wTableWeek02__thead">
+                                <ul class="wTableWeek02__tr">
+                                    <li class="wTableWeek02__td date">
+                                        <p>日</p>
+                                    </li>
+                                    <li class="wTableWeek02__td weather">
+                                        <p>天気</p>
+                                    </li>
+                                    <li class="wTableWeek02__td high">
+                                        <p>最高<span class="small">℃</span></p>
+                                    </li>
+                                    <li class="wTableWeek02__td low">
+                                        <p>最低<span class="small">℃</span></p>
+                                    </li>
+                                    <li class="wTableWeek02__td rain">
+                                        <p>降水<span class="small">%</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wTableWeek02__tbody" v-cloak>
+                                <ul v-for='item in fcst_wk' class="wTableWeek02__tr">
+                                    <li class="wTableWeek02__td date">
+                                        <p :class="{sun:item.holiday,sat:item.sat}">{{item.date}}<br>{{item.youbi_str}}</p>
+                                    </li>
+                                    <li class="wTableWeek02__td weather">
+                                        <p><img :src="item.telop" class="wIcon"></p>
+                                    </li>
+                                    <li class="wTableWeek02__td">
+                                        <p class="h">{{item.high}}</p>
+                                    </li>
+                                    <li class="wTableWeek02__td">
+                                        <p class="l">{{item.low}}</p>
+                                    </li>
+                                    <li class="wTableWeek02__td rain">
+                                        <p>{{item.pop}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <p class="button01 page-link" style="display:flex;justify-content:flex-end;margin-bottom:10px;margin-top:10px;">
+                            <a href="https://weathernews.jp/onebox/tenki/week/" class="link">
+                                <span class="text">全国の週間天気はこちら</span>
+                                <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                            </a>
+                        </p>
+                    </div>
+                </section>
+            </article>
+            
+            <article class="block">
+                <div class="titleArea">
+                    <h2 class="title01"><span class="text">お天気ニュース</span></h2>
+                    <p class="button01 page-link pc">
+                        <a href="//weathernews.jp/s/topics/" class="link">
+                            <span class="text">お天気ニュースをもっと読む</span>
+                            <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                        </a>
+                    </p>
+                </div>
+                <section id="tplist" class="newsList"></section>
+                <p class="button01 page-link justify-end sp">
+                    <a href="//weathernews.jp/s/topics/" class="link">
+                        <span class="text">お天気ニュースをもっと読む</span>
+                        <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                    </a>
+                </p>
+            </article>
+            <article class="block pc clear flex-row browsi-b-none" style="text-align: center; padding: 10px 0; font-size: 0;">
+                <div style="min-width: 300px;min-height: 200px; display:inline-block;margin: 0 10px 0 0;">
+                    <!-- /284705699/Onebox/Onebox_below_week_pc -->
+                    <div id='div-gpt-ad-1659955769033-0'> </div>
+                </div>
+                <div style="min-width: 300px;min-height: 200px; display:inline-block;margin: 0 auto;">
+                    <!-- /284705699/Onebox/Onebox_below_week_pc_right -->
+                    <div id='div-gpt-ad-1659955895494-0'> </div>
+                </div>
+            </article>
+            <section class="amedas sp" v-cloak>
+                <h2 class="title01"><span class="text">全国のアメダスランキング</span></h2>
+                <div class="tabs">
+                    <div class="tab" :class="{'is-selected':isTemp}" v-on:click="selectTab('temp')">
+                    <p class="text">気温</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isRain}" v-on:click="selectTab('rain')">
+                    <p class="text">降水量</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isWind}" v-on:click="selectTab('wind')">
+                    <p class="text">風</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isSnow}" v-on:click="selectTab('snow')">
+                    <p class="text">降雪量</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isHumid}" v-on:click="selectTab('humid')">
+                    <p class="text">湿度</p>
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="row">
+                        <p class="text">順位</p>
+                        <p class="text">地点</p>
+                        <p class="text">観測値</p>
+                    </div>
+                    <ul class="ranking">
+                        <li v-for="point in amedasRanking[selectedCategory]" class="list">
+                            <p class="rank">{{point.rank}}</p>
+                            <div class="item"><a class="area" :href="'https://weathernews.jp/onebox/amedas/' + point.pref_roma + '/' + point.amedascode + '/'">{{point.obsln}}</a>
+                                <p class="note"><span class="pc">(</span>{{point.pref}}<span class="pc">)</span></p>
+                            </div>
+                            <div class="item">
+                                <p class="value">{{point.dataval}}{{dataValUnit}}</p>
+                                <p v-show="selectedCategory!='WIND_VEL_10MIN_MEAN'" class="note"><span class="pc">(</span>{{point.dateRecord}}<span class="pc">)</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="button01 page-link justify-end p-inline-10--sp">
+                    <a :href="amedasLink[selectedCategory]" class="link">
+                        <spna class="text">アメダスランキングをもっと見る</spna>
+                        <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                    </a>
+                </p>
+            </section>
+            <section class="livelist" v-show="movieList" v-cloak><div class="titleArea"><h2 class="title01"><span class="text">ウェザーニュースLiVE</span></h2><p class="button01 page-link pc"><a href="https://www.youtube.com/user/weathernews" class="link" target="_blank"><span class="text" >もっと見る</span><span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span></a></p></div><ul class="youtube__content"><li v-for="content in movieList"><a :href="content.url" class="youtubeItem" target="_blank"><figure class="image"><img :src="content.thumb" width="108" height="61" alt="" loading="lazy"></figure><div class="youtube__content"><p class="catch" v-if="content.live">ライブ放送中</p><div class="texts"><p class="text">{{ content.title }}</p></div></div></a></li></ul></section>
+            <!-- 一旦カット -->
+            <!-- <article class="block">
+                <dl class="linkList01">
+                    <div class="linkList__item">
+                        <dt class="linkList__title">雨雲レーダー</dt>
+                        <dd class="linkList__thumb"><a href="//weathernews.jp/onebox/radar/"><img class="lazy" src="https://weathernews.jp/onebox/img/dummy1.png"
+                                        :data-original="radarImg" width="100%;" height="100%;"></a></dd>
+                    </div>
+                    <div class="linkList__item">
+                        <dt class="linkList__title">衛星雲画像</dt>
+                        <dd class="linkList__thumb"><a href="//weathernews.jp/s/satellite/"><img class="lazy" src="https://weathernews.jp/onebox/img/dummy1.png"
+                                        data-original="//weathernews.jp/onebox/img/thumb_linkList--eiesei.png" width="100%;" height="100%;"></a></dd>
+                    </div>
+                    <div class="linkList__item">
+                        <dt class="linkList__title">アメダス</dt>
+                        <dd class="linkList__thumb"><a href="//weathernews.jp/onebox/amedas/"><img class="lazy" src="https://weathernews.jp/onebox/img/dummy1.png"
+                                        data-original="//weathernews.jp/onebox/img/thumb_linkList--amedasu.png" width="100%;" height="100%;"></a></dd>
+                    </div>
+                    <div class="linkList__item">
+                        <dt class="linkList__title">天気図</dt>
+                        <dd class="linkList__thumb"><a href="//weathernews.jp/s/story/"><img class="lazy" src="https://weathernews.jp/onebox/img/dummy1.png"
+                                        data-original="//weathernews.jp/onebox/img/thumb_linkList--tenkizu.png" width="100%;" height="100%;"></a></dd>
+                    </div>
+                </dl>
+            </article> -->
+            <article class="block"><h2 class="title01" style="margin-bottom: 10px;margin-top: 10px;">注目のお出かけスポット天気（全国）</h2><section class="blueArea"><div class="areaList"><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000055/">東京ディズニーランド</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000147/">ユニバーサル・スタジオ・ジャパン（ＵＳＪ）</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000098/">富士急ハイランド</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000136/">ナガシマスパーランド</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000203/">ハウステンボス</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000138/">鈴鹿サーキット・モートピア</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000080/">横浜・八景島シーパラダイス</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000083/">さがみ湖MORIMORI</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000082/">よみうりランド</a></li><li class="areaList__item areaList__button"><a class="areaList__link" href="//weathernews.jp/onebox/tenki/spot/01000145/">天橋立ビューランド</a></li></div></section></article>
+            <article v-show="!cityname" class="block"><h2 class="title01" v-cloak><span>各エリアの天気予報</span></h2><section class="blueArea"><div class="areaList flex-col"><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/hokkaido/" class="areaList__link text-link">北海道</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/douou/" class="areaList__link">道央</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/dounan/" class="areaList__link">道南</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/douhoku/" class="areaList__link">道北</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/doutou/" class="areaList__link">道東</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/tohoku/" class="areaList__link text-link">東北</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/aomori/" class="areaList__link">青森</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/iwate/" class="areaList__link">岩手</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/akita/" class="areaList__link">秋田</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/miyagi/" class="areaList__link">宮城</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/yamagata/" class="areaList__link">山形</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/fukushima/" class="areaList__link">福島</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/kanto/" class="areaList__link text-link">関東</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/tokyo/" class="areaList__link">東京</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kanagawa/" class="areaList__link">神奈川</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/saitama/" class="areaList__link">埼玉</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/chiba/" class="areaList__link">千葉</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/ibaraki/" class="areaList__link">茨城</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/tochigi/" class="areaList__link">栃木</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/gunma/" class="areaList__link">群馬</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/chubu/" class="areaList__link text-link">中部</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/shizuoka/" class="areaList__link">静岡</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/aichi/" class="areaList__link">愛知</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/gifu/" class="areaList__link">岐阜</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/yamanashi/" class="areaList__link">山梨</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/nagano/" class="areaList__link">長野</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/niigata/" class="areaList__link">新潟</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/toyama/" class="areaList__link">富山</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/ishikawa/" class="areaList__link">石川</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/fukui/" class="areaList__link">福井</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/kinki/" class="areaList__link text-link">近畿</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/osaka/" class="areaList__link">大阪</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/hyogo/" class="areaList__link">兵庫</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kyoto/" class="areaList__link">京都</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/shiga/" class="areaList__link">滋賀</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/nara/" class="areaList__link">奈良</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/wakayama/" class="areaList__link">和歌山</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/mie/" class="areaList__link">三重</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/chugoku/" class="areaList__link text-link">中国</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/hiroshima/" class="areaList__link">広島</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/okayama/" class="areaList__link">岡山</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/yamaguchi/" class="areaList__link">山口</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/shimane/" class="areaList__link">島根</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/tottori/" class="areaList__link">鳥取</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/shikoku/" class="areaList__link text-link">四国</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kagawa/" class="areaList__link">香川</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/tokushima/" class="areaList__link">徳島</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/ehime/" class="areaList__link">愛媛</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kouchi/" class="areaList__link">高知</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/kyushu/" class="areaList__link text-link">九州</a></li></ul><ul class="areaList__group flex-1"><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/fukuoka/" class="areaList__link">福岡</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/saga/" class="areaList__link">佐賀</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/nagasaki/" class="areaList__link">長崎</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/oita/" class="areaList__link">大分</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kumamoto/" class="areaList__link">熊本</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/miyazaki/" class="areaList__link">宮崎</a></li><li class="areaList__item areaList__button"><a href="https://weathernews.jp/onebox/tenki/kagoshima/" class="areaList__link">鹿児島</a></li></ul></div><div class="areaList__pref"><ul class="areaList__group area"><li class="areaList__item"><a href="https://weathernews.jp/onebox/tenki/okinawa/" class="areaList__link text-link">沖縄</a></li></ul></div></div></section></article>
+        </article>
+ 
+        <aside id="sub">
+            <section class="block__lv03 browsi-b-none">
+                <div style="width:100%; margin:0 auto; text-align:center;">
+                    <!-- /284705699/Onebox/Onebox_btf -->
+                    <div id='div-gpt-ad-1649291117541-0' class="sp"
+                        style="height:auto; max-width:336px; text-align: center; margin: 0 auto;">
+                    </div>
+                    <!-- /284705699/Onebox/Onebox_btf_pc -->
+                    <div id='div-gpt-ad-1603093335136-0' class="pc"
+                        style="min-height:250px; max-height:600px; max-width:336px; text-align: center; margin: 0 auto;">
+                    </div>
+                </div>
+            </section>
+            <section class="amedas is-sub pc" v-cloak>
+                <h2 class="title01"><span class="text">全国のアメダスランキング</span></h2>
+                <div class="tabs">
+                    <div class="tab" :class="{'is-selected':isTemp}" v-on:click="selectTab('temp')">
+                    <p class="text">気温</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isRain}" v-on:click="selectTab('rain')">
+                    <p class="text">降水量</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isWind}" v-on:click="selectTab('wind')">
+                    <p class="text">風</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isSnow}" v-on:click="selectTab('snow')">
+                    <p class="text">降雪量</p>
+                    </div>
+                    <div class="tab" :class="{'is-selected':isHumid}" v-on:click="selectTab('humid')">
+                    <p class="text">湿度</p>
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="row">
+                        <p class="text">順位</p>
+                        <p class="text">地点</p>
+                        <p class="text">観測値</p>
+                    </div>
+                    <ul class="ranking">
+                        <li v-for="point in amedasRanking[selectedCategory]" class="list">
+                            <p class="rank">{{point.rank}}</p>
+                            <div class="item"><a class="area" :href="'https://weathernews.jp/onebox/amedas/' + point.pref_roma + '/' + point.amedascode + '/'">{{point.obsln}}</a>
+                                <p class="note"><span class="pc">(</span>{{point.pref}}<span class="pc">)</span></p>
+                            </div>
+                            <div class="item">
+                                <p class="value">{{point.dataval}}{{dataValUnit}}</p>
+                                <p v-show="selectedCategory!='WIND_VEL_10MIN_MEAN'" class="note"><span class="pc">(</span>{{point.dateRecord}}<span class="pc">)</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="button01 page-link justify-end p-inline-10--sp">
+                    <a :href="amedasLink[selectedCategory]" class="link">
+                        <spna class="text">アメダスランキングをもっと見る</spna>
+                        <span class="arrow"><img src="//weathernews.jp/onebox/img/icon_arrow.svg" width="14px" height="12px"></span>
+                    </a>
+                </p>
+            </section>
+            <section class="block web no-ja"><a href="https://weathernews.jp/app/?fm=onebox" onclick="ga_and_go(this.href,'osusume_app')"><img src="https://weathernews.jp/onebox/img/banner_app_pinpoint-3_320x100@2x.png" style="width: 100%;padding: 10px 0px;"></a></section>
+            <section class="block">
+                <h3 class="subTitle">天気メニュー</h3>
+                <ul class="subMenu">
+                    <li class="subMenu__item"><a href="https://weathernews.jp/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_tenki&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_forecast.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_forecast.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">天気予報</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/s/topics/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_topics&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_topics@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_topics@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">お天気ニュース</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/onebox/amedas/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_obs&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_obsdata.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_obsdata.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">アメダス(実況天気)</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/onebox/radar/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_radar&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_radar.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_radar.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">雨雲レーダー</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/livecam/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_livecam&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_livecam.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_livecam.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ライブカメラ</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/thunder/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_thunder&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_thunder.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_thunder.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">落雷情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/satellite/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_satellite&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_satellite.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_satellite.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">衛星雲画像</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/story/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_story&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_wxchart.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_wxchart.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">天気図</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/opinion/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_opinion&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_opinion.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_opinion.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">長期予報</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/wnl/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_wnilive&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_wnl@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_wnl@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ライブ動画番組</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/s/world/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_world&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_world.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_world.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">世界天気</span></a></li>
+                    <li class="subMenu__item"><a href="https://wxrepo.weathernews.jp/report/area/?fm=onebox" onclick="ga_and_go(this.href,&quot;link_wxreport&quot;)" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_report.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_report.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ウェザーリポート</span></a></li>
+                </ul>
+            </section>
+            <section class="block">
+                <h3 class="subTitle">防災・減災メニュー</h3>
+                <ul class="subMenu">
+                    <li class="subMenu__item"><a href="//weathernews.jp/onebox/warn/?fm=onebox" onclick="ga_and_go(this.href,'link_warn')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_warning.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_warning.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">警報・注意報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/onebox/typhoon/?fm=onebox" onclick="ga_and_go(this.href,'link_typhoon')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_typhoon.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_typhoon.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">台風情報</span></a>
+                    </li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/quake/?fm=onebox" onclick="ga_and_go(this.href,'link_quake')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_quake.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_quake.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">地震情報</span></a>
+                    </li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/tsunami/?fm=onebox" onclick="ga_and_go(this.href,'link_tsunami')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_tsunami.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_tsunami.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">津波情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/volcano/?fm=onebox" onclick="ga_and_go(this.href,'link_volcano')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_volcano.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_volcano.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">火山情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/gensai/?fm=onebox" onclick="ga_and_go(this.href,'link_gensai')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_gensai@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_gensai@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">減災情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/guerrilla/?fm=onebox" onclick="ga_and_go(this.href,'link_guerrilla')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_guerrilla@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_guerrilla@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ゲリラ雷雨情報</span></a>
+                    </li>
+                </ul>
+            </section>
+            <section class="block">
+                <h3 class="subTitle">自然・季節・レジャー情報</h3>
+                <ul class="subMenu">
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/golf/?fm=onebox" onclick="ga_and_go(this.href,'link_golf')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_golf.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_golf.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ゴルフ場の天気</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/stadium/?fm=onebox" onclick="ga_and_go(this.href,'link_stadium')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_stadium@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_stadium@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">スポーツ天気</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/fishing/?fm=onebox" onclick="ga_and_go(this.href,'link_fishing')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_fishing@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_fishing@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">釣り情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/marine/?fm=onebox" onclick="ga_and_go(this.href,'link_marine')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_marine@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_marine@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">マリン情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/star/?fm=onebox" onclick="ga_and_go(this.href,'link_star')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_star.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_star.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">星空情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/pollen/?fm=onebox" onclick="ga_and_go(this.href,'link_pollen')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_pollen.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_pollen.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">花粉飛散予報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/sakura/?fm=onebox" onclick="ga_and_go(this.href,'link_sakura')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/list-menu_icon_sakura.svg" data-original="https://weathernews.jp/onebox/img/icon/list-menu_icon_sakura.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">さくら開花情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/hotaru/?fm=onebox" onclick="ga_and_go(this.href,'link_hotaru')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_hotaru@2x.png" data-original="https://weathernews.jp/onebox/img/icon/icon_hotaru@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ほたる情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/ajisai/?fm=onebox" onclick="ga_and_go(this.href,'link_ajisai')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_ajisai@2x.png" data-original="https://weathernews.jp/onebox/img/icon/icon_ajisai@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">あじさい情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/uv/?fm=onebox" onclick="ga_and_go(this.href,'link_uv')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_uv@2x.png" data-original="https://weathernews.jp/onebox/img/icon/icon_uv@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">紫外線予報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/pain/?fm=onebox" onclick="ga_and_go(this.href,'link_pain')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_pain@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_pain@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">天気痛予報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/clothes/?fm=onebox" onclick="ga_and_go(this.href,'link_clothes')" class="subMenu__link"><img class="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_clothes.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_clothes.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">服装予報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/s/laundry/?fm=onebox" onclick="ga_and_go(this.href,'link_laundry')" class="subMenu__link"><img class="lazy" src="https://gvs.weathernews.jp/onebox/img/icon/icon_sentaku@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sentaku@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">お洗濯情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/heatstroke/?fm=onebox" onclick="ga_and_go(this.href,'link_heatstroke')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_heatstroke@2x.png" data-original="https://weathernews.jp/onebox/img/icon/icon_heatstroke@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">熱中症情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/hanabi/?fm=onebox" onclick="ga_and_go(this.href,'link_hanabi')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_fireworks@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_fireworks@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">花火情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/koyo/?fm=onebox" onclick="ga_and_go(this.href,'link_koyo')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_koyo@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_koyo@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">紅葉情報</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/illumi/?fm=onebox" onclick="ga_and_go(this.href,'link_illumi')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_illumi@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_illumi@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">イルミネーション</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/ski/?fm=onebox" onclick="ga_and_go(this.href,'link_ski')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_ski@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_ski@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">スキー＆スノボ</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/sunrise/?fm=onebox" onclick="ga_and_go(this.href,'link_sunrise')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_sunrise@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sunrise@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">初日の出</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/hatsumoude/?fm=onebox" onclick="ga_and_go(this.href,'link_hatsumoude')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_hatsumoude@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_hatsumoude@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">初詣</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/cold/?fm=onebox" onclick="ga_and_go(this.href,'link_cold')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_cold@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_cold@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">風邪予防指数</span></a></li>
+                    <li class="subMenu__item"><a href="//weathernews.jp/dry/?fm=onebox" onclick="ga_and_go(this.href,'link_dry')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_dry@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_dry@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">乾燥指数</span></a></li>
+                </ul>
+            </section>
+            <section class="block">
+                <p class="subTitle">便利なメニュー</p>
+                <ul class="subMenu">
+                    <li class="subMenu__item"><a href="https://weathernews.jp/about_forecast/?fm=onebox" onclick="ga_and_go(this.href,'link_no1')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_NO1.svg" data-original="https://weathernews.jp/onebox/img/icon/icon_NO1.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">予報精度向上の取り組み</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/about_forecast/faq/?fm=onebox" onclick="ga_and_go(this.href,'link_faq')" class="subMenu__link"><img src="https://weathernews.jp/onebox/img/icon/icon_question0.svg" data-original="https://weathernews.jp/onebox/img/icon/icon_question0.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">予報に関するFAQ</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/sorashop/?fm=onebox" onclick="ga_and_go(this.href,'link_sorashop')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_sorashop@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_sorashop@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">SORASHOP</span></a></li>
+                    <li class="subMenu__item"><a href="http://labs.weathernews.jp/data.html?fm=onebox" onclick="ga_and_go(this.href,'link_labs')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_labs.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_labs.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">Labs Ch.</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/s/solution/?fm=onebox" onclick="ga_and_go(this.href,'link_mysolution')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_mysolution.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_mysolution.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">マイソリューション</span></a></li>
+                    <li class="subMenu__item"><a href="https://weathernews.jp/quake/html/urgentquake.html?fm=onebox" onclick="ga_and_go(this.href,'link_L10s')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_10sec.svg" data-original="https://gvs.weathernews.jp/onebox/img/icon/list-menu_icon_10sec.svg" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">The Last 10-Second</span></a></li>
+                </ul>
+            </section>
+            <section class="block"><p class="subTitle">会員情報</p><ul class="subMenu menberInfo"><li class="subMenu__item memberInfo__item"><a href="https://weathernews.jp/s/pivot/join.html" onclick="ga_and_go(this.href,'link_join')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_setting.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_setting.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ウェザーニュース会員登録・解除</span></a></li><li class="subMenu__item memberInfo__item"><a href="https://weathernews.jp/s/family/subscription/" onclick="ga_and_go(this.href,'link_family')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_family.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_family.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ファミリー会員登録・解除</span></a></li><li class="subMenu__item memberInfo__item"><a href="https://weathernews.jp/pro/" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_pro@2x.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_pro@2x.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ウェザーニュースPro</span></a></li><li class="subMenu__item memberInfo__item"><a href="https://weathernews.jp/s/login/" onclick="ga_and_go(this.href,'link_login')" class="subMenu__link"><img src="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_login.png" data-original="https://gvs.weathernews.jp/onebox/img/icon/icon_Ch_login.png" class="lazy subMenu__icon" width="20px" height="20px"><span class="subMenu__text">ログイン＆ログアウト</span></a></li></ul></section>
+            <section class="block">
+                <p class="subTitle">ウェザーニュースの公式SNS</p>
+                <ul class="snsList">
+                    <li class="snsList__item"><a href="https://www.facebook.com/weathernews.inc/" onclick="ga_and_go(this.href,&quot;sns_facebook&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_facebook.svg" data-original="https://gvs.weathernews.jp/onebox/img/sns_facebook.svg" class="sns_icon lazy" style=""></a></li>
+                    <li class="snsList__item"><a href="https://twitter.com/wni_jp/" onclick="ga_and_go(this.href,&quot;sns_twitter&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_x.svg" data-original="https://gvs.weathernews.jp/onebox/img/sns_x.svg" class="sns_icon lazy" style=""></a></li>
+                    <li class="snsList__item"><a href="https://line.me/ti/p/%40wni_jp" onclick="ga_and_go(this.href,&quot;sns_line&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_line.svg" data-original="https://gvs.weathernews.jp/onebox/img/sns_line.svg" class="sns_icon lazy" style=""></a></li>
+                    <li class="snsList__item"><a href="https://www.youtube.com/user/weathernews" onclick="ga_and_go(this.href,&quot;sns_youtube&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_youtube.svg" data-original="https://gvs.weathernews.jp/onebox/img/sns_youtube.svg" class="sns_icon lazy" style=""></a></li>
+                    <li class="snsList__item"><a href="https://www.instagram.com/wni_jp/" onclick="ga_and_go(this.href,&quot;sns_instagram&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_insta.png" data-original="https://gvs.weathernews.jp/onebox/img/sns_insta.png" class="sns_icon lazy" style=""></a></li>
+                    <li class="snsList__item"><a href="https://www.tiktok.com/@weathernewslive" onclick="ga_and_go(this.href,&quot;sns_tiktok&quot;)"><img src="https://gvs.weathernews.jp/onebox/img/sns_tiktok.svg" data-original="https://gvs.weathernews.jp/onebox/img/sns_tiktok.svg" class="sns_icon lazy" style=""></a></li>
+                </ul>
+            </section>
+            <section class="browsi-b-none">
+                <!-- /284705699/Onebox/Onebox_btm -->
+                <div id='div-gpt-ad-1513594575498-0' style="width:100%; margin:0 auto 10px; text-align:center;"> </div>
+            </section>
+        </aside>
+    </article>
+    <footer id="footer">
+        <ul class="footerLinkList">
+            <li class="footerLinkList__item"><a href="//jp.weathernews.com/" class="footerLinkList__link">会社概要</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.jp/ip/kiyaku/" class="footerLinkList__link">利用規約</a></li>
+            <li class="footerLinkList__item"><a href="//jp.weathernews.com/privacy-policy/" class="footerLinkList__link">プライバシーポリシー</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.jp/ip/kiyaku/torihikihou.html" class="footerLinkList__link">特定商取引法の表記</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.jp/ip/outtraffic/web.html" class="footerLinkList__link">外部送信先</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.com/jp/c/terms/" class="footerLinkList__link">ご利用に際して</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.jp/s/faq_v2/" class="footerLinkList__link">よくある質問</a></li>
+            <li class="footerLinkList__item"><a href="//weathernews.jp/sitemap/" class="footerLinkList__link">サイトマップ</a></li>
+        </ul>
+        <div class="footerCopyArea">
+            <p class="footerCopy">ウェザーニュース</p>
+        </div>
+    </footer>
+ 
+    <div style="filter:drop-shadow(-1px -1px 2px #ccc); width: 100%; position: fixed; bottom: 0;z-index: 1000; background-color: #fff; text-align: center;padding-top: 7px;padding-bottom: 7px;display:none;">
+        <div id="div-gpt-ad-sticky" style="display: inline-block"></div>
+        <button style="position:absolute;top:-24px;right: 0; height:24px;width:25px; border-top-left-radius: 5px;background-color: #fff; font-size: 24px;text-align:center; padding: 0; line-height: 1em;border: none;user-select:none;outline:none;cursor:pointer;min-height:auto;" onclick="ads.close_sticky();"><svg width="24px" height="24px"><path d="M4.875,4.875l12.75,12.75M17.625,4.875l-12.75,12.75" stroke-width="3" stroke="#bbb"></path></svg></button>
+    </div>
+ 
+    <div id="sticky_pc" class="pc show">
+        <!-- /284705699/Onebox/Onebox_stickyad_pc -->
+        <div id="div-gpt-ad-1657185267868-0"></div>
+        <button style="position:absolute;top:0;right: 0; height:24px;width:25px; border-top-left-radius: 5px;background-color: #fff; font-size: 24px;text-align:center; padding: 0; line-height: 1em;border: none;user-select:none;outline:none;cursor:pointer;min-height:auto;" onclick="close_sticky_pc();">
+            <svg width="24px" height="24px">
+                <path d="M4.875,4.875l12.75,12.75M17.625,4.875l-12.75,12.75" stroke-width="3" stroke="#bbb"></path>
+            </svg>
+        </button>
+    </div>
+ 
+<script src="https://weathernews.jp/s/js/axios.0.27.2.min.js"></script>
+<script src="https://weathernews.jp/s/js/vue.min.2.0.js"></script>
+<script src="//weathernews.jp/s/js/launch.js?1"></script>
+<script>var use_sticky_ad = true;</script>
+<script src="https://weathernews.jp/s/js25/welcome.js?2"></script>
+<script src="https://weathernews.jp/onebox/js/app_v2.4.gtag.js"></script>
+<script src="https://site.weathernews.jp/site/js/util/mainpoint.js?3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/utc.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/timezone.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/plugin/customParseFormat.min.js"></script>
+ 
+<script>
+// variables
+var akey,mdbauth,chk_key,chk;
+var countlog_tag = "onebox_area";
+var global_loc = "0";
+var lang = "ja";
+const now = new Date();
+const now_month = now.getMonth() + 1; // 0 ~ 11
+ 
+dayjs.extend(window.dayjs_plugin_utc);
+dayjs.extend(window.dayjs_plugin_timezone);
+dayjs.extend(window.dayjs_plugin_customParseFormat);
+dayjs.tz.setDefault("Asia/Tokyo");
+ 
+window.onload = function() {
+    $("img.lazy").lazyload();
+    force_replace_lazyload();
+}
+ 
+window.onresize = function() {
+    force_replace_lazyload();
+}
+ 
+$(function () { 
+    $('*[data-name="fukidashiBtn"]').click(function () {
+        $('*[data-name="fukidashi"]').fadeIn(250);
+        $("#search_sp").focus();
+    });
+ 
+    $('*[data-name="fukidashiClose"]').click(function () {
+        $('*[data-name="fukidashi"]').fadeOut(250);
+    });
+});
+ 
+function force_replace_lazyload() {
+    if($(window).width() > 768) {
+        replace_dataOriginal_to_src('.list-news__img img.lazy');
+    } 
+}
+ 
+function replace_dataOriginal_to_src(selector) {
+    Array.prototype.forEach.call(document.querySelectorAll(selector), function(el) {
+        var orginal = el.getAttribute('data-original');
+        var src     = el.getAttribute('src');
+        if(el.getAttribute('data-original') && orginal != src) {
+            el.setAttribute('src', el.getAttribute('data-original'));
+        }
+        else {
+            return; // try just 1 element
+        }
+    });
+}
+ 
+var search_result = 'search_result1';
+ 
+function search_city1(){
+    var qword = document.getElementById('search_city_input1').value;
+    if (qword == ""){return;}
+    var w = $(window).width();
+    search_result = (w > 768) ? 'search_result1' : 'search_result2';
+    search_city(qword);
+}
+ 
+function search_city_input(id) {
+    var qword = document.getElementById(id).value;
+    if (qword == "") { return; }
+    ga_event('search_query ' + qword);
+ 
+    var w = $(window).width();
+    search_result = (w > 768) ? 'search_result1' : 'search_result2';
+    search_city(qword);
+}
+ 
+function search_city(qword){
+    //$.getJSON("/onebox/api_search.cgi?callback=?",{"query":qword,"reflat":__LAT__,"reflon":__LON__,"lang":"ja"},function(r){
+    //$.getJSON("/onebox/api_search.cgi?callback=?",{"query":qword,"lang":"ja"},function(r){
+    axios
+    .get("/onebox/api_search.cgi?callback=",{
+        params : {
+            "query":qword,
+            "lang":"ja"
+        }
+    })
+    .then(function(r){
+        if (r.data.length == 1) {
+            location.href = r.data[0].url + '&temp=c&lang=ja';
+            return;
+        }
+        for (var i = 0; i < r.data.length; i++) {
+            if (r.data[i].loc == qword) {    // exactly match goes to direct jump
+            location.href = r.data[i].url + '&temp=c&lang=ja';
+            return;
+            }
+        }
+        // no exact match
+        var h = '';
+        h += '<p class="search_tit">検索結果 (' + r.data.length + ') </p>';
+        h += '<ul class="topics_list">';
+        for (var i = 0; i < r.data.length; i++) {
+            h += '<li class="topics_item">'
+                var url = r.data[i].url + '&temp=c&lang=ja';
+                var ga_key = 'search ' + r.data[i].loc;
+            h += '<a href="javascript:ga_and_go(\'' + url + '\', \'' + ga_key + '\')">' + r.data[i].loc + '</a>';
+            h += '</li>';
+        }
+        h += '</ul>';
+        document.getElementById(search_result).innerHTML = h;
+        $("#" + search_result).fadeIn(500,function(){
+            $("#" + search_result).css("background-color","#ccddff");
+            setTimeout(function(){$("#" + search_result).css("background-color","white");}, 150);
+            });
+    });
+}
+ 
+function init__2(){
+    if(global_loc == "1") {
+        $(".no-global").remove();
+    }
+    if(lang != "ja") {
+        $(".no-ja").remove();
+    }
+    if(browsi_flag == 'B'){
+        Array.prototype.forEach.call(document.querySelectorAll('.browsi-b-none'), function (el) {
+            el.style.display = 'none';
+        })
+    }
+    vm.get_movietable();
+    get_tplist();
+}
+ 
+document.addEventListener('DOMContentLoaded', init__2);
+</script>
+<script>
+var area = '全国';
+var areacode = 'JAPAN';
+var map_w = 1024; var map_h = 1024;
+var panel_w = 115; var panel_h = 174;
+var highlight_point = '';
+var map_pos = [{"y":351,"url":"https://weathernews.jp/onebox/tenki/tohoku/","name":"仙台","x":870},{"y":544,"url":"https://weathernews.jp/onebox/tenki/kanto/","name":"東京","x":887},{"y":624,"url":"https://weathernews.jp/onebox/tenki/chubu/","name":"名古屋","x":751},{"y":645,"url":"https://weathernews.jp/onebox/tenki/kinki/","name":"大阪","x":611},{"y":692,"url":"https://weathernews.jp/onebox/tenki/shikoku/","name":"高知","x":471},{"y":845,"url":"https://weathernews.jp/onebox/tenki/okinawa/","name":"那覇","x":164},{"y":534,"url":"https://weathernews.jp/onebox/tenki/kyushu/","name":"福岡","x":309},{"y":453,"url":"https://weathernews.jp/onebox/tenki/chugoku/","name":"広島","x":456},{"y":392,"url":"https://weathernews.jp/onebox/tenki/chubu/","name":"金沢","x":587},{"y":316,"url":"https://weathernews.jp/onebox/tenki/chubu/","name":"新潟","x":715},{"y":119,"url":"https://weathernews.jp/onebox/tenki/hokkaido/","name":"札幌","x":770}];
+var AREALIST = ["JAPAN","TOHOKU","KANTO","CHUBU","KINKI","CHUBU","SHIKOKU","KYUSHU"]
+var historyList;
+if(navigator.cookieEnabled){
+    if (typeof window.localStorage !== 'undefined'){
+        historyList = JSON.parse(localStorage.getItem('wx_history'))
+    }
+}
+var vm = new Vue({
+	'el': '#wrapper',
+	'data': {
+		'argv': {},
+		'ua':   {},
+		'fcst': [{"date":"","day":"","mapsrc":""},{},{},{},{},{},{},{}],
+		'map_idx': wniutil.cookie.fmap_idx || 0,
+		'comment' : {'day':'', 'week':''},
+		'title' : {'day':'', 'week':''},
+        'fcst_1h':[],
+        'fcst_wk':[],
+        'cityname':'',
+        'pref':'',
+        'citycode':'',
+        'pref_jp':'',
+        'ranking_list':[],
+        'isTemp':true,
+        'isRain':false,
+        'isSnow':false,
+        'isWind':false,
+        'isHumid':false,
+        'selectedCategory':(4 <= now_month && now_month <= 9) ? 'AIR_TEMP_1DAY_MAX' : 'AIR_TEMP_1DAY_MIN',
+        'dataValUnit':'℃',
+        'amedasRanking':{'AIR_TEMP_1DAY_MAX':'','AIR_TEMP_1DAY_MIN':'','RAIN_AMNT_1HOUR_TOTAL_1DAY_MAX':'','WIND_VEL_10MIN_MEAN':'','SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX':'','AIR_HUM_1DAY_MIN':''},
+        'amedasLink':{
+            'AIR_TEMP_1DAY_MAX':'https://weathernews.jp/onebox/amedas/ranking/',
+            'AIR_TEMP_1DAY_MIN':'https://weathernews.jp/onebox/amedas/ranking/',
+            'RAIN_AMNT_1HOUR_TOTAL_1DAY_MAX':'https://weathernews.jp/onebox/amedas/precip/ranking/',
+            'WIND_VEL_10MIN_MEAN':'https://weathernews.jp/onebox/amedas/wind/ranking/',
+            'SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX':'https://weathernews.jp/onebox/amedas/snow/ranking/',
+            'AIR_HUM_1DAY_MIN':'https://weathernews.jp/onebox/amedas/humidity/ranking/'
+        },
+        'movieList':[]
+    },
+    computed: {
+        mapsrc () {
+            if(!this.fcst[0].mapsrc && this.map_idx === 0) {
+                return 'https://site.weathernews.jp/site/forecast/image/map/JAPAN.today.png?' + wniutil.nocache
+            } else {
+                return this.fcst[this.map_idx].mapsrc
+            }
+        }
+    },
+	'methods': {
+		strftime: function(fmt, d) {
+			if(d) {
+				return wniutil.simple_strftime(fmt, d, ['日','月','火','水','木','金','土']);
+			}
+		},
+        setWeather(lat,lon){
+            let youbi_str = ["(日)","(月)","(火)","(水)","(木)","(金)","(土)"];
+            let self = this
+            axios
+            .get("https://site.weathernews.jp/lba/wxdata/api_data_ss1?lat=" + lat + "&lon=" + lon,{
+                params : {
+                    tm:wniutil.nocache
+                }
+            })
+            .then(function(p){
+                let wx_1hour = {}
+                // 1時間天気
+                for(var i = 0;i < p.data.srf.length; i++){
+                    let elm = {};
+                    let day = new Date(Number(p.data.srf[i].tm) * 1000);
+                    let tm = new Date(day.getFullYear(), day.getMonth(), day.getDate(), 0, 0, 0).getTime()
+                    elm.time = day.getHours();
+                    elm.telop = "https://weathernews.jp/onebox/img/wxicon/" + p.data.srf[i].WX + ".png";
+                    if(-0.5 <= Number(p.data.srf[i].AIRTMP) && Number(p.data.srf[i].AIRTMP) <= -0.1){
+                        elm.temp = Math.round(Number(p.data.srf[i].AIRTMP)) + 0;
+                    }
+                    else{
+                        elm.temp = Math.round(Number(p.data.srf[i].AIRTMP));
+                    }
+                    if(0 <= Number(p.data.srf[i].WNDDIR) && Number(p.data.srf[i].WNDDIR) < 10){
+                        elm.wnddir = "0" + p.data.srf[i].WNDDIR;
+                    }
+                    else{
+                        elm.wnddir = p.data.srf[i].WNDDIR;
+                    }
+                    if(0 <= Number(p.data.srf[i].WNDSPD) && Number(p.data.srf[i].WNDSPD) < 5){
+                        elm.wndspd_img = 0;
+                    }
+                    else if(5 <= Number(p.data.srf[i].WNDSPD) && Number(p.data.srf[i].WNDSPD) < 10){
+                        elm.wndspd_img = 1;
+                    }
+                    else if(10 <= Number(p.data.srf[i].WNDSPD) && Number(p.data.srf[i].WNDSPD) < 15){
+                        elm.wndspd_img = 2;
+                    }
+                    else if(15 <= Number(p.data.srf[i].WNDSPD) && Number(p.data.srf[i].WNDSPD) < 20){
+                        elm.wndspd_img = 3;
+                    }
+                    else if(20 <= Number(p.data.srf[i].WNDSPD) && Number(p.data.srf[i].WNDSPD) < 25){
+                        elm.wndspd_img = 4;
+                    }
+                    else{
+                        elm.wndspd_img = 5;
+                    }
+                    elm.wnd_telop_png = "https://weathernews.jp/onebox/img/wind/png/wind_" + elm.wndspd_img + "_" + elm.wnddir + ".png"
+                    elm.wnd_telop_webp = "https://weathernews.jp/onebox/img/wind/webp/wind_" + elm.wndspd_img + "_" + elm.wnddir + ".png.webp"
+                    elm.wndspd = Math.round(p.data.srf[i].WNDSPD)
+                    elm.prec = p.data.srf[i].PREC;
+                    if(wx_1hour[tm] == null){
+                        wx_1hour[tm] = {
+                            date: day.getDate(),
+                            youbi_str: youbi_str[day.getDay()],
+                            hourly: []
+                        }
+                    }
+                    wx_1hour[tm].hourly.push(elm)
+                }
+                self.fcst_1h = wx_1hour
+ 
+                // 週間天気
+                for(var i = 0;i < 10; i++){
+                    let elm = {};
+                    let day = new Date(Number(p.data.mrf[i].tm)*1000);
+                    elm.date = day.getDate();
+                    elm.youbi_str = youbi_str[day.getDay()];
+                    elm.sat = (day.getDay() == 6) ? true : false;
+                    elm.holiday = (p.data.mrf[i].holiday == 1) ? true : false;
+                    elm.telop = "https://weathernews.jp/onebox/img/wxicon/" + p.data.mrf[i].WX + ".png";
+                    elm.high = p.data.mrf[i].MAXT;
+                    elm.low = p.data.mrf[i].MINT;
+                    elm.pop = p.data.mrf[i].POP;
+                    self.fcst_wk.push(elm);
+                }
+            })
+        },
+        setRankings() {
+			let self = this
+            var max_rank;
+			axios
+			.get("https://site.weathernews.jp/site/onebox/landmark/amusement/json/ranking.json",{
+				params : {
+					tm:wniutil.nocache
+				}
+			})
+			.then(function(res){
+				if(res.data){
+					if(res.data['info'].length > 5) {
+						max_rank = 5
+					}
+					else {
+						max_rank = res.data['info'].length
+					}
+					for(var i = 0; i < max_rank; i ++){
+						let elm = {}
+						elm.name = res.data['info'][i].name
+						elm.page = res.data['info'][i].pagePath
+						elm.ranking = res.data['info'][i].ranking
+						self.ranking_list.push(elm)
+					}
+				}
+			})
+		},
+        getRankClass(rank) {
+			if( rank === 1 ){ return "rank1" }
+			else if(rank === 2){ return "rank2" }
+			else if(rank >= 3){return "rank"}
+			else{ return "" }
+		},
+        get_movietable(){
+            var movietableurl = 'https://site.weathernews.jp/site/live/json/list.json';
+            let self = this;
+            axios
+            .get(movietableurl,{
+                params : {
+                    tm:wniutil.nocache
+                }
+            })
+            .then(function(p){
+                if(p.data['live']){
+                    self.movieList.push({
+                        'thumb': p.data['live']['thumbnail'],
+                        'url': "https://youtu.be/" + p.data['live']['id'],
+                        'title': p.data['live']['title'],
+                        'live': p.data['live']['live']
+                    })
+                }
+                if(p.data['ondemand']){
+                    for(let item of p.data['ondemand']){
+                        self.movieList.push({
+                            'thumb': item['thumbnail'],
+                            'url': "https://youtu.be/" + item['id'],
+                            'title': item['title'],
+                            'live': item['live']
+                        })
+                    }
+                }
+            })
+            .catch(function(){
+                self.movieList = [];
+            });
+        },
+        async getAmedasRanking(area){
+            let self = this;
+            let CATEGORY = (4 <= now_month && now_month <= 9) ? ['AIR_TEMP_1DAY_MAX','RAIN_AMNT_1HOUR_TOTAL_1DAY_MAX','WIND_VEL_10MIN_MEAN','SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX','AIR_HUM_1DAY_MIN'] : ['AIR_TEMP_1DAY_MIN','RAIN_AMNT_1HOUR_TOTAL_1DAY_MAX','WIND_VEL_10MIN_MEAN','SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX','AIR_HUM_1DAY_MIN'];
+            for(var category of CATEGORY){
+                await axios
+                .get("https://weathernews.jp/info/data/obs/rank/" + category + "/latest.json",{
+                    params : {
+                        tm:wniutil.nocache
+                    }
+                })
+                .then(function(p){
+                    if (area !== 'japan') {
+                        if(area === 'izu') {
+                            area = "tokyo"
+                        }
+                        p.data.rank = p.data.rank.filter((point) => point.pref_roma === area || point.area_roma === area).slice(0,3);
+                    } else {
+                        p.data.rank = p.data.rank.slice(0,3);
+                    }
+                    p.data.rank.forEach((rank, index, array) => {
+                        var occured = rank.occured;
+                        var setDate = occured ? dayjs(occured, 'YYYYMMDD HHmmssZ').tz().format('HH:mm') : '---';
+                        rank.dateRecord = setDate;
+                        rank.pref = rank.pref.replace(/(都|府|県)$/, '');
+                        if(rank.dataval == -9999) rank.dataval = '--';
+                        else rank.dataval = (category == 'SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX' || category == 'AIR_HUM_1DAY_MIN') ? rank.dataval : rank.dataval.toFixed(1);
+ 
+                        if (index === 0) rank.rank = 1;
+                        else {
+                            var prev = array[index - 1];
+                            if (rank.dataval === prev.dataval) rank.rank = prev.rank; // 同じ値ならインクリメントしない
+                            else rank.rank = index + 1;
+                        }
+                    })
+                    self.amedasRanking[category] = p.data.rank;
+                })
+            }
+        },
+        selectTab(type){
+            if(type == 'temp') {
+                vm.isTemp = true;
+                vm.isRain = false;
+                vm.isSnow = false;
+                vm.isWind = false;
+                vm.isHumid = false;
+                vm.selectedCategory = (4 <= now_month && now_month <= 9) ? "AIR_TEMP_1DAY_MAX" : "AIR_TEMP_1DAY_MIN";
+                vm.dataValUnit = "℃";
+            } else if(type == 'rain'){
+                vm.isTemp = false;
+                vm.isRain = true;
+                vm.isSnow = false;
+                vm.isWind = false;
+                vm.isHumid = false;
+                vm.selectedCategory = "RAIN_AMNT_1HOUR_TOTAL_1DAY_MAX";
+                vm.dataValUnit = "mm";
+            } else if(type == 'snow'){
+                vm.isTemp = false;
+                vm.isRain = false;
+                vm.isSnow = true;
+                vm.isWind = false;
+                vm.isHumid = false;
+                vm.selectedCategory = "SNOW_AMNT_1HOUR_TOTAL_1DAY_MAX";
+                vm.dataValUnit = "cm";
+            } else if(type == "wind"){
+                vm.isTemp = false;
+                vm.isRain = false;
+                vm.isSnow = false;
+                vm.isWind = true;
+                vm.isHumid = false;
+                vm.selectedCategory = "WIND_VEL_10MIN_MEAN";
+                vm.dataValUnit = "m/s";
+            } else if(type == "humid"){
+                vm.isTemp = false;
+                vm.isRain = false;
+                vm.isSnow = false;
+                vm.isWind = false;
+                vm.isHumid = true;
+                vm.selectedCategory = "AIR_HUM_1DAY_MIN";
+                vm.dataValUnit = "%";
+            }
+        }
+	}
+});
+ 
+var _vm = new Vue({
+    el: '#header',
+    data: {
+        historyList: historyList,
+        'fcst_hist': []
+    },
+    methods: {
+        getWx(el) {
+            return axios.get("https://site.weathernews.jp/lba/wxdata/api_data_ss1?lat=" + el.lat + "&lon=" + el.lon, {
+                params: {
+                    tm: wniutil.nocache
+                }
+            }).then(function(p) {
+                const elm = {};
+                elm.telop = "https://weathernews.jp/onebox/img/wxicon/header_wIcon_" + p.data.mrf[0].WX + "@2x.png";
+                elm.high = p.data.mrf[0].MAXT;
+                elm.low = p.data.mrf[0].MINT;
+                elm.url = el.url
+                elm.cityname = el.cityname
+                return elm
+            })
+        },
+        historyClose(id){
+			_vm.fcst_hist.splice(id,1)
+			historyList.splice(id,1)
+			localStorage.setItem('wx_history',JSON.stringify(historyList));
+		},
+        async process() {
+            this.fcst_hist = await Promise.all(this.historyList.map(history => this.getWx(history)))
+        }
+    }
+})
+ 
+var vue_outer = new Vue({
+    el: '#outer',
+    data: {
+        'ticker_title':'',
+        'ticker_text':'',
+        'ticker_color':'',
+        'ticker_url':'',
+        'tickerHTML':''
+    },
+    methods: {
+        getTickerData(area){
+            let self = this
+            axios
+            .get("https://site.weathernews.jp/site/onebox/json/onebox_area_ticker.json",{
+                params : {
+                    tm:wniutil.nocache
+                }
+            })
+            .then(function(p){
+                if(area in p.data) {
+                    for(let item of p.data[area]) {
+                        if(item['target'].includes('tenki')) {
+                            self.ticker_title = item['title'];
+                            self.ticker_text = item['text'];
+                            self.ticker_color = item['color'];
+                            self.ticker_url = item['url'];
+                        }
+                    }
+                }
+            })
+        },
+    }
+});
+ 
+function change_date(idx) {
+	vm.$data.map_idx = idx;
+	cookie_write('fmap_idx', idx, 1/144); // 10min
+}
+ 
+function custom_imagemap(e) {
+	var pos = get_mouse_pos(e);
+ 
+	for(var p in map_pos) {
+		var lt_x = map_pos[p].x - panel_w/2;
+		var rb_x = map_pos[p].x + panel_w/2;
+		var lt_y = map_pos[p].y - panel_h/2;
+		var rb_y = map_pos[p].y + panel_h/2;
+ 
+		if(
+			lt_x < pos.x && pos.x < rb_x &&
+			lt_y < pos.y && pos.y < rb_y
+		)
+		{
+			location.href = map_pos[p].url;
+			break;
+		}
+	}
+ 
+}
+ 
+function highlight_imagemap(e) {
+	var pos = get_mouse_pos(e);
+	var hit = false;
+	for(var p in map_pos) {
+		var lt_x = map_pos[p].x - panel_w/2;
+		var rb_x = map_pos[p].x + panel_w/2;
+		var lt_y = map_pos[p].y - panel_h/2;
+		var rb_y = map_pos[p].y + panel_h/2;
+ 
+		if(
+			lt_x < pos.x && pos.x < rb_x &&
+			lt_y < pos.y && pos.y < rb_y
+		)
+		{
+			if(highlight_point == p) return;
+ 
+			var highlight = document.getElementById('map_highlight');
+			highlight.style.width  = Math.ceil(panel_w / pos.ratio) + 'px';
+			highlight.style.height = Math.ceil(panel_h / pos.ratio) + 'px';
+			highlight.style.top    = Math.floor(lt_y/pos.ratio) + 'px';
+			highlight.style.left   = Math.floor(lt_x/pos.ratio) + 'px';
+			highlight.style.display = 'block';
+            highlight.style.position = 'absolute';
+			highlight.setAttribute('href', map_pos[p].url);
+ 
+			hit = true;
+			highlight_point = p;
+ 
+			break;
+				
+		}
+	}
+	if(hit == false) {
+		if(highlight_point == p) return;
+		var highlight = document.getElementById('map_highlight');
+		highlight.style.width  = 0;
+		highlight.style.height = 0;
+		highlight.style.display = 'none';
+ 
+		highlight_point = '';
+	}
+ 
+}
+ 
+function get_mouse_pos(e) {
+	var mouse_x = e.offsetX;
+	var mouse_y = e.offsetY;
+	var img_w = e.target.clientWidth;
+	var img_h = e.target.clientHeight;
+	var org_w = e.target.naturalWidth;
+	var org_h = e.target.naturalHeight;
+	var ratio = org_w / img_w;
+ 
+	var pos_x = Math.floor(mouse_x * ratio);
+	var pos_y = Math.floor(mouse_y * ratio);
+ 
+	return {x: pos_x, y: pos_y, ratio: ratio};
+}
+ 
+function get_data() {
+	var json = '/comment/map_area/' + areacode.toLowerCase() + '.json';
+	//$.getJSON(json, {t:wniutil.nocache})
+	//	.done(function(p) {
+	//		if(p.fcst) vm.$data.fcst =  p.fcst;
+	//		if(p.title) vm.$data.title = p.title;
+	//		if(p.comment) vm.$data.comment = p.comment;
+	//	})
+	//	.fail(function(){})
+	//	.always(function() {
+	//		wniutil.remove_nowloading();
+	//	});
+    axios
+    .get(json,{
+        params : {
+            tm:wniutil.nocache
+        }
+    })
+    .then(function(p) {
+        if(p.data.fcst) {
+            vm.fcst = p.data['fcst'];
+            for(var item of vm.fcst){
+                preloadImage(item['mapsrc']);
+            }
+        }
+        if(p.data.title) vm.title = p.data['title'];
+        if(p.data.comment) vm.comment = p.data['comment'];
+    })
+    if(areacode in mainPoint){
+        var lat = mainPoint[areacode]["lat"]
+        var lon = mainPoint[areacode]["lon"]
+        vm.pref = mainPoint[areacode]["pref"]
+        vm.citycode = mainPoint[areacode]["citycode"]
+        vm.cityname = mainPoint[areacode]["cityname"]
+        vm.pref_jp = mainPoint[areacode]["pref_jp"]
+        vm.setWeather(lat,lon)
+    } else {
+        vm.setRankings();
+    }
+    vue_outer.getTickerData(areacode.toLowerCase());
+    vm.getAmedasRanking(areacode.toLowerCase());
+    if(navigator.cookieEnabled){
+        if(_vm.historyList != null && _vm.historyList.length > 0){
+            _vm.process();
+        } else {
+            $('.wniLogo').css({
+                width: '185px',
+                height: '40px'
+            });
+            $('.headerWeatherList').css({
+                position: 'initial'
+            }) 
+        }
+    } else {
+        $('.wniLogo').css({
+            width: '185px',
+            height: '40px'
+        });
+        $('.headerWeatherList').css({
+            position: 'initial'
+        }) 
+    }
+}
+ 
+function init__1() {
+	get_data();
+ 
+	Vue.set(vm, 'smart_carrier',  smart_carrier);
+	Vue.set(vm, 'smart_platform', smart_platform);
+	Vue.set(vm, 'smart_webview',  smart_webview);
+	Vue.set(vm, 'argv',           argv);
+	if(smart_platform === '') document.getElementById('map').addEventListener('mousemove', highlight_imagemap);
+	else document.getElementById('map').addEventListener('click', custom_imagemap);
+}
+init__1();
+ 
+function flip_prev() {
+    var s_left = $("#flick_list").scrollLeft() - 228;
+    $("#flick_list").animate({ scrollLeft: s_left }, 300);
+    ga_event('flip_prev ' + s_left);
+}
+function flip_next() {
+    var s_left = $("#flick_list").scrollLeft() + 228;
+    $("#flick_list").animate({ scrollLeft: s_left }, 300);
+    ga_event('flip_next ' + s_left);
+}
+var ga_scr;
+function flip_scroll() {
+    var scr_now = $("#flick_list").scrollLeft();
+    var scr_w = $("#flick_list").width();
+    var scr_max = $("#flick_list").get(0).scrollWidth;
+ 
+    if (!ga_scr && scr_now > 1) {
+        ga_scr = "start";
+        ga_event('flip_next ' + ga_scr);
+    } else if ((ga_scr != "end") && ((scr_now + scr_w) == scr_max)) {
+        ga_scr = "end";
+        ga_event('flip_next ' + ga_scr);
+    }
+}
+</script>
+ 
+<script>
+//window.addEventListener('load', function() {
+//    if ('serviceWorker' in navigator) {
+//        navigator.serviceWorker.register('/onebox/service-worker.js');
+//    }
+//});
+</script>
+<script>
+ 
+  var ads;
+  function gpt_init() {
+    var fmp,rmp;
+    //sticky広告分底上げをしておく
+    $("#footer").css("margin-bottom", "100px");
+    var gpt_conf = []
+    if(browsi_flag != 'B'){
+        gpt_conf.push(
+            {
+                'unit_code': '/284705699/Onebox/Onebox_btm',
+                'size': [[160,600],[320,50],[336,280],[120,600],[200,200],[320,100],[300,250],[300,600],[320,250],[1,1],[320,180]],
+                'slot_id': 'div-gpt-ad-1513594575498-0',
+                'mapping': [
+                { 'displaySize': [952, 400], 'adSize': [[300,250],[336,280],[320,50],[320,100],[200,200],[300,600],[160,600],[120,600]] },
+                { 'displaySize': [  0,   0], 'adSize': [[300,250],[336,280],[320,50],[320,100],[200,200]] }
+                ],
+                'apstag': true,
+                'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+            }
+        );
+    }
+    //スマホ
+    if(smart_platform){
+        fmp = 100
+        rmp = 50
+        gpt_conf.push(
+            {
+                'unit_code': '/284705699/Onebox/Onebox_atf2',
+                'size': [[320, 50], [320, 100], 'fluid'],
+                'slot_id': 'div-gpt-ad-1630890223433-0',
+                'apstag': true,
+                'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+            },
+            {
+                'unit_code': '/284705699/Onebox/Onebox_atf2',
+                'size': [[320, 50], [320, 100], 'fluid'],
+                'slot_id': 'div-gpt-ad-1630890223433-1',
+                'apstag': true,
+                'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+            }
+        )
+        if(browsi_flag != 'B'){
+            gpt_conf.push(
+                {
+                    'unit_code': '/284705699/Onebox/Onebox_btf',
+                    'size': [[320, 100], 'fluid', [320, 50], [300, 250], [200, 200], [320, 180], [336, 280], [320, 250]],
+                    'slot_id': 'div-gpt-ad-1649291117541-0',
+                    'apstag': true,
+                    'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+                },
+                {
+                    'unit_code': '/284705699/Onebox/Onebox_below_week',
+                    'size': [[200, 200], [320, 100], [320, 50], [300, 250], 'fluid', [336, 280], [320, 180], [1, 1], [320, 250]],
+                    'slot_id': 'div-gpt-ad-1526363937901-0',
+                    'apstag': true,
+                    'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+                }
+            )
+        }
+    } else {
+        fmp = 0
+        rmp = 0
+        gpt_conf.push(
+            {
+                'unit_code': '/284705699/Onebox/Onebox_atf_pc',
+                'size': [[468, 60], [320, 100], [320, 50]],
+                'slot_id': 'div-gpt-ad-1658294899747-0',
+                'apstag': true,
+                'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+            },
+            {
+                'unit_code': '/284705699/Onebox/Onebox_stickyad_pc',
+                'size': [[970, 90], [640, 100], [640, 50], [950, 90], [728, 90], [950, 70]],
+                'slot_id': 'div-gpt-ad-1657185267868-0',
+                'apstag': true,
+                'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+            }
+        )
+        if(browsi_flag != 'B'){
+            gpt_conf.push(
+                {
+                    'unit_code': '/284705699/Onebox/Onebox_btf_pc',
+                    'size': [[160, 600], [320, 180], [300, 600], [300, 250], [320, 50], [336, 280], [200, 200], [120, 600], [320, 100], [1, 1], 'fluid'],
+                    'slot_id': 'div-gpt-ad-1603093335136-0',
+                    'apstag': true,
+                    'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+                },
+                {
+                    'unit_code': '/284705699/Onebox/Onebox_below_week_pc',
+                    'size': [[1, 1], [336, 280]],
+                    'slot_id': 'div-gpt-ad-1659955769033-0',
+                    'apstag': true,
+                    'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+                },
+                {
+                    'unit_code': '/284705699/Onebox/Onebox_below_week_pc_right',
+                    'size': [[1, 1], [336, 280]],
+                    'slot_id': 'div-gpt-ad-1659955895494-0',
+                    'apstag': true,
+                    'targeting': {'area': 'JAPAN', 'wni_browsi': browsi_flag, 'category':'MAP' }
+                }
+            )
+        }
+    }
+    var sticky_conf = {
+        'default' :  {"unit_code":"/284705699/Onebox/Onebox_sticky_ad", "size":[320,50],"slot_id":"div-gpt-ad-sticky","apstag":true, "targeting": {"wni_browsi": browsi_flag, 'category':'MAP' }},
+    }
+    sticky_conf['sugotoku'] = sticky_conf['smartpass'] = sticky_conf['apppass'] = sticky_conf['app'] = sticky_conf.default;
+ 
+    ads = new WNIAds({'gpt_conf': gpt_conf, 'use_default': false, 'lazyload': { fetchMarginPercent: fmp, renderMarginPercent: rmp}, 'gpt_sticky_conf': sticky_conf, "sticky": {'disableApp': true}, "use_prebids": use_prebid});
+    ads.init_ads();
+    setTimeout(() => {
+        googletag.pubads().addEventListener('slotRenderEnded', (e) => {
+            var slotId = e.slot.getSlotId().getDomId()
+            if (slotId === 'div-gpt-ad-1657185267868-0') {
+                var target = document.getElementById(slotId)
+                if (target.childNodes[0].hasChildNodes() === false) {
+                    var wrap = target.parentNode
+                    wrap.style.display = 'none'
+                }
+            }
+        })
+    }, 500);
+  }
+  window.addEventListener('load', gpt_init);
+ 
+  function historyClose(){
+    var e = window.event;
+    var elem = e.target || e.srcElement;
+    var elemId = elem.parentElement.id;
+    _vm.fcst_hist.splice(elemId,1)
+    historyList.splice(elemId,1)
+    localStorage.setItem('wx_history',JSON.stringify(historyList));
+}
+ 
+  function close_sticky_pc() {
+    $('#sticky_pc').hide();
+    ga_event('close_sticky_pc');
+}
+/* var stickyElem = document.getElementById('sticky_pc')
+var stickyAdsControl = (event) => { 
+    if(window.scrollY >= 300) {
+        stickyElem.classList.add('show') // show は付けっぱなしにする
+        stickyElem.classList.remove('hide')
+    } else {
+        stickyElem.classList.add('hide')
+    }
+}
+if(smart_platform == ''){
+    window.addEventListener('scroll', stickyAdsControl)
+} */
+</script>
+ 
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","mainEntityOfPage":{"@type":"WebPage","@id":"https://weathernews.jp"},"relatedLink":"https://weathernews.jp","image":{"@type":"ImageObject","url":"https://weathernews.jp/onebox/img/og_img.jpg","height":630,"width":1200},"author":{"@type":"Person","name":"ウェザーニュース"},"publisher":{"@type":"Organization","name":" Weathernews, Inc.","url":" https://weathernews.jp/","logo":{"@type":"ImageObject","url":"https://weathernews.jp/logo/wni_s.png","width":163,"height":60}},"url":"https://weathernews.jp","headline":"全国の天気","description":"【天気予報精度No.1】最新の気象情報ならウェザーニュース！雨雲レーダーや台風、地震、注意報・警報、アメダス、天気図など気象や防災に役立つ情報、気象予報士解説のお天気ニュースを随時更新中。天気痛や熱中症、花粉の生活情報に加え、桜や紅葉、スキーの季節情報など天気に関する全てをサポートします。"}</script>
+ 
+</body>
+<script src="https://weathernews.jp/onebox/js/header_v2.0.js?240322"></script>
+ 
+</html>
+ 
