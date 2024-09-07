@@ -53,100 +53,84 @@
     color: blue; /* ホバー時の色を変更 */
   }
 </style>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>記事生成</title>
+    <title>最新ニュース</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .news-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .news-item {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .news-item a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <h1>最新ニュース</h1>
+    <ul class="news-list" id="news-list">
+        <!-- ニュース項目がここに表示される -->
+    </ul>
+
     <script>
-        // ニュースAPIのURL（NewsAPIのエンドポイントを使用）
+        // ニュースAPIのURL
         const apiKey = '2940d50d318f4c2da235515606d5df74';
         const apiUrl = `https://newsapi.org/v2/top-headlines?country=jp&apiKey=${apiKey}`;
 
-        async function generateArticles() {
+        // ニュースを取得して表示する関数
+        async function loadNews() {
             try {
                 const response = await fetch(apiUrl);
                 const data = await response.json();
-                
-                const articles = data.articles;
-                const internationalArticles = articles.filter(article => article.source.name !== '日本');
-                const japanArticles = articles.filter(article => article.source.name === '日本');
-                
-                const totalArticles = 10; // 生成する記事の総数
-                const japanRatio = 0.7; // 日本の記事の割合
-                const japanCount = Math.floor(totalArticles * japanRatio);
-                const internationalCount = totalArticles - japanCount;
-                
-                let articleCount = 1;
 
-                // 日本の記事を先に生成
-                japanArticles.slice(0, japanCount).forEach((article, index) => {
-                    const articleNumber = articleCount++;
-                    const htmlContent = `
-                        <!DOCTYPE html>
-                        <html lang="ja">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>ニュース記事 ${articleNumber}</title>
-                        </head>
-                        <body>
-                            <h1>ニュース記事 ${articleNumber}</h1>
-                            <div class="content">
-                                <h2><a href="${article.url}">${article.title}</a></h2>
-                                <p>${article.description}</p>
-                                <a href="index.html">戻る</a>
-                            </div>
-                        </body>
-                        </html>
-                    `;
-                    const blob = new Blob([htmlContent], { type: 'text/html' });
-                    const url = URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.download = `${articleNumber}.html`;
-                    link.click();
+                // ニュースリストの要素を取得
+                const newsList = document.getElementById('news-list');
+
+                // ニュース記事を動的に追加
+                data.articles.slice(0, 10).forEach((article, index) => {
+                    const newsItem = document.createElement('li');
+                    newsItem.classList.add('news-item');
+                    
+                    const newsLink = document.createElement('a');
+                    newsLink.href = `article${index + 1}.html`;  // 記事ページへのリンク
+                    newsLink.textContent = `${index + 1}. ${article.title}`;  // ニュース記事のタイトル
+
+                    newsItem.appendChild(newsLink);
+                    newsList.appendChild(newsItem);
                 });
 
-                // 国際記事を生成
-                internationalArticles.slice(0, internationalCount).forEach((article, index) => {
-                    const articleNumber = articleCount++;
-                    const htmlContent = `
-                        <!DOCTYPE html>
-                        <html lang="ja">
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <title>ニュース記事 ${articleNumber}</title>
-                        </head>
-                        <body>
-                            <h1>ニュース記事 ${articleNumber}</h1>
-                            <div class="content">
-                                <h2><a href="${article.url}">${article.title}</a></h2>
-                                <p>${article.description}</p>
-                                <a href="index.html">戻る</a>
-                            </div>
-                        </body>
-                        </html>
-                    `;
-                    const blob = new Blob([htmlContent], { type: 'text/html' });
-                    const url = URL.createObjectURL(blob);
-                    const link = document.createElement('a');
-                    link.href = url;
-                    link.download = `${articleNumber + 1}.html`; // +1して次の番号を付ける
-                    link.click();
-                });
-
+                // URLをローカルストレージに保存
+                localStorage.setItem('articleUrls', JSON.stringify(data.articles.slice(0, 10).map(article => article.url)));
             } catch (error) {
-                console.error('記事の生成に失敗しました', error);
+                console.error('ニュースの取得に失敗しました', error);
             }
         }
 
-        // 記事を生成
-        generateArticles();
+        // ページが読み込まれた時にニュースを表示
+        window.onload = loadNews;
     </script>
 </body>
 </html>
